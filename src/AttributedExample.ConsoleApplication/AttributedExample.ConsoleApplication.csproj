@@ -75,7 +75,7 @@
       <HintPath>..\..\packages\Autofac.Extras.Attributed.3.2.1\lib\net40\Autofac.Extras.Attributed.dll</HintPath>
     </Reference>
     <Reference Include="Stateless">
-      <HintPath>..\..\lib\Stateless\Stateless.dll</HintPath>
+      <HintPath>..\..\packages\Stateless.2.5.11.0\lib\portable-net40+sl50+win+wp80\Stateless.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -87,12 +87,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Extras\Source\Autofac.Extras.Attributed\Properties\VersionAssemblyInfo.cs">
-      <Link>Properties\VersionAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="ApplicationMenu.cs" />
     <Compile Include="Configuration\IStateStepConfiguration.cs" />
     <Compile Include="Configuration\MetadataDefinition.cs" />

@@ -111,12 +111,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\GlobalAssemblyInfo.cs">
-      <Link>Properties\GlobalAssemblyInfo.cs</Link>
-    </Compile>
-    <Compile Include="..\..\Core\Source\Autofac\Properties\VersionAssemblyInfo.cs">
-      <Link>Properties\VersionAssemblyInfo.cs</Link>
-    </Compile>
     <Compile Include="NHibernateModule.cs" />
     <Compile Include="NHibernateRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
