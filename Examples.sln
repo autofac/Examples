@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributedExample.ConsoleApplication", "src\AttributedExample.ConsoleApplication\AttributedExample.ConsoleApplication.csproj", "{CB6B42DE-2464-49A3-9533-8DEBF64A8D8F}"
 EndProject
