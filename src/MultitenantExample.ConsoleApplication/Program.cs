@@ -1,6 +1,6 @@
 ﻿using System;
 using Autofac;
-using Autofac.Extras.Multitenant;
+using Autofac.Multitenant;
 
 namespace MultitenantExample.ConsoleApplication
 {
