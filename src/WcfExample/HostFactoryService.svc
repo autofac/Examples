@@ -1,0 +1,5 @@
+﻿<%@ ServiceHost
+    Language="C#"
+    Service="WcfExample.HostFactoryService, WcfExample"
+    Factory="Autofac.Integration.Wcf.AutofacServiceHostFactory, Autofac.Integration.Wcf"
+    CodeBehind="HostFactoryService.svc.cs"%>

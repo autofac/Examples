@@ -16,6 +16,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeMetadataExample", "src\AttributeMetadataExample\AttributeMetadataExample.csproj", "{38DDAE6D-0D1D-40D6-BF57-CAFED0322222}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcExample", "src\MvcExample\MvcExample.csproj", "{49C746F1-53F4-433C-ABE0-1938D8B508B2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{91212914-7EAF-4FC7-88E8-5C8ED9A9DB4A} = {91212914-7EAF-4FC7-88E8-5C8ED9A9DB4A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExample", "src\WcfExample\WcfExample.csproj", "{91212914-7EAF-4FC7-88E8-5C8ED9A9DB4A}"
 EndProject
