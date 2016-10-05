@@ -91,6 +91,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomActionFilter.cs" />
     <Compile Include="SecondMiddleware.cs" />
     <Compile Include="ILogger.cs" />
     <Compile Include="Logger.cs" />

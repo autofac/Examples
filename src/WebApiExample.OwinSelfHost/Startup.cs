@@ -24,6 +24,13 @@ namespace WebApiExample.OwinSelfHost
             // Register Web API controller in executing assembly.
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
 
+            // OPTIONAL - Register the filter provider if you have custom filters that need DI.
+            // Also hook the filters up to controllers.
+            builder.RegisterWebApiFilterProvider(config);
+            builder.RegisterType<CustomActionFilter>()
+                .AsWebApiActionFilterFor<TestController>()
+                .InstancePerRequest();
+
             // Register a logger service to be used by the controller and middleware.
             builder.Register(c => new Logger()).As<ILogger>().InstancePerRequest();
 
@@ -32,9 +39,8 @@ namespace WebApiExample.OwinSelfHost
             builder.RegisterType<FirstMiddleware>().InstancePerRequest();
             builder.RegisterType<SecondMiddleware>().InstancePerRequest();
 
-            var container = builder.Build();
-
             // Create and assign a dependency resolver for Web API to use.
+            var container = builder.Build();
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
 
             // The Autofac middleware should be the first middleware added to the IAppBuilder.
