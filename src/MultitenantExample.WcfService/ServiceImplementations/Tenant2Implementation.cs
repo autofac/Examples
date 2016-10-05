@@ -1,19 +1,20 @@
 ﻿using System;
-using Autofac.Extras.Multitenant;
+using Autofac.Multitenant;
 using MultitenantExample.WcfService.Dependencies;
 
 namespace MultitenantExample.WcfService.ServiceImplementations
 {
     public class Tenant2Implementation : IMultitenantService, IMetadataConsumer
     {
-        public IDependency Dependency { get; set; }
-        public ITenantIdentificationStrategy TenantIdentificationStrategy { get; set; }
-
         public Tenant2Implementation(IDependency dependency, ITenantIdentificationStrategy tenantIdStrategy)
         {
             this.Dependency = dependency;
             this.TenantIdentificationStrategy = tenantIdStrategy;
         }
+
+        public IDependency Dependency { get; set; }
+
+        public ITenantIdentificationStrategy TenantIdentificationStrategy { get; set; }
 
         public GetServiceInfoResponse GetServiceInfo()
         {

@@ -21,10 +21,10 @@
     <MetadataSource Address="http://localhost:63578/MetadataConsumer.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MetadataConsumer.disco" MetadataType="Disco" ID="b2a25f0c-3023-4e75-8885-965f418b0906" SourceId="1" SourceUrl="http://localhost:63578/MetadataConsumer.svc?disco" />
     <MetadataFile FileName="MetadataConsumer.xsd" MetadataType="Schema" ID="042137d9-261b-4430-b9e0-9d1fd59e3114" SourceId="1" SourceUrl="http://localhost:63578/MetadataConsumer.svc?xsd=xsd0" />
-    <MetadataFile FileName="IMetadataConsumerProxy_1.wsdl" MetadataType="Wsdl" ID="e870778f-f8f7-45d3-a155-41b0b5fe2a2c" SourceId="1" SourceUrl="http://localhost:63578/MetadataConsumer.svc?wsdl" />
+    <MetadataFile FileName="MetadataConsumer.disco" MetadataType="Disco" ID="b2a25f0c-3023-4e75-8885-965f418b0906" SourceId="1" SourceUrl="http://localhost:63578/MetadataConsumer.svc?disco" />
     <MetadataFile FileName="MetadataConsumer1.xsd" MetadataType="Schema" ID="688c2e0f-437e-4193-afe2-e599775cdba8" SourceId="1" SourceUrl="http://localhost:63578/MetadataConsumer.svc?xsd=xsd1" />
+    <MetadataFile FileName="IMetadataConsumerProxy_1.wsdl" MetadataType="Wsdl" ID="e870778f-f8f7-45d3-a155-41b0b5fe2a2c" SourceId="1" SourceUrl="http://localhost:63578/MetadataConsumer.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

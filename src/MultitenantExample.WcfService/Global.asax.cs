@@ -1,8 +1,8 @@
 ﻿using System;
 using Autofac;
-using Autofac.Extras.Multitenant;
-using Autofac.Extras.Multitenant.Wcf;
 using Autofac.Integration.Wcf;
+using Autofac.Multitenant;
+using Autofac.Multitenant.Wcf;
 using MultitenantExample.WcfService.Dependencies;
 using MultitenantExample.WcfService.ServiceImplementations;
 

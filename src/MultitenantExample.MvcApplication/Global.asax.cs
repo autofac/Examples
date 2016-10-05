@@ -3,10 +3,9 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Autofac;
-using Autofac.Extras.Multitenant;
-using Autofac.Extras.Multitenant.Wcf;
-using Autofac.Extras.Multitenant.Web;
 using Autofac.Integration.Mvc;
+using Autofac.Multitenant;
+using Autofac.Multitenant.Wcf;
 using MultitenantExample.MvcApplication.Controllers;
 using MultitenantExample.MvcApplication.Dependencies;
 using MultitenantExample.MvcApplication.WcfMetadataConsumer;
@@ -47,9 +46,6 @@ namespace MultitenantExample.MvcApplication
         /// </summary>
         protected void Application_Start()
         {
-            // Create the tenant ID strategy. Required for multitenant integration.
-            var tenantIdStrategy = new RequestParameterTenantIdentificationStrategy("tenant");
-
             // Register application-level dependencies and controllers. Note that
             // we are manually registering controllers rather than all at the same
             // time because some of the controllers in this sample application
@@ -58,9 +54,15 @@ namespace MultitenantExample.MvcApplication
             builder.RegisterType<HomeController>();
             builder.RegisterType<BaseDependency>().As<IDependency>();
 
+            // Create the tenant ID strategy. Required for multitenant integration.
+            var tenantIdStrategy = new RequestParameterStrategy();
+
             // Adding the tenant ID strategy into the container so controllers
             // can display output about the current tenant.
             builder.RegisterInstance(tenantIdStrategy).As<ITenantIdentificationStrategy>();
+
+            // The next couple of registrations - for the channel factory and channel
+            // to WCF services - show how to consume multitenant WCF services.
 
             // The service client is not different per tenant because
             // the service itself is multitenant - one client for all

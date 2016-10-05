@@ -1,5 +1,5 @@
 ﻿using System;
-using Autofac.Extras.Multitenant;
+using Autofac.Multitenant;
 using MultitenantExample.WcfService.Dependencies;
 
 namespace MultitenantExample.WcfService.ServiceImplementations
@@ -34,8 +34,8 @@ namespace MultitenantExample.WcfService.ServiceImplementations
         /// </returns>
         public static GetServiceInfoResponse Build(IMultitenantService serviceImplementation, IDependency dependency, ITenantIdentificationStrategy tenantIdStrategy)
         {
-            object tenantId = null;
-            bool success = tenantIdStrategy.TryIdentifyTenant(out tenantId);
+            var tenantId = (object)null;
+            var success = tenantIdStrategy.TryIdentifyTenant(out tenantId);
             if (!success || tenantId == null)
             {
                 tenantId = "[Default Tenant]";
