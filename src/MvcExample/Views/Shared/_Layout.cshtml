@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Autofac MVC Demo" />
+    <title>@ViewBag.Title - Autofac MVC Demo</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="page">
+
+        <div id="header">
+            <div id="title">
+                <h1>Multitenant Autofac Example</h1>
+            </div>
+
+            <div id="logindisplay">
+                &nbsp;
+            </div>
+
+            <div id="menucontainer">
+
+                <ul id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="main">
+            @RenderBody()
+
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

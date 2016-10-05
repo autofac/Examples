@@ -1,0 +1,18 @@
+﻿@* If you are using view injection you must inherit from a custom view page. *@
+@* If you are NOT using view injection, you don't need this "inherits" line. *@
+@inherits CustomViewPage<MvcExample.Models.DependencyValueModel>
+
+@{
+    ViewBag.Title = "MVC Example Home";
+}
+
+<h2>Autofac MVC Example</h2>
+
+<p>This view consumes dependencies that are injected by Autofac. Check out the controller and view source to understand where the values are coming from.</p>
+
+@* This dependency comes from the CustomViewPage that this view derives from. *@
+@* This only works if you have view injection enabled. *@
+<p>View dependency ID: @this.Dependency.InstanceId</p>
+
+@* This dependency comes from an action filter that adds it to the current context. *@
+<p>Filter dependency ticks: @this.Model.FilterValue</p>
