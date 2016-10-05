@@ -10,6 +10,7 @@ namespace AspNetCoreExample
     {
         public static void Main(string[] args)
         {
+            // Look in the Startup class for the Autofac and app setup.
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())

@@ -4,6 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreExample.Controllers
 {
+    /// <summary>
+    /// Simple REST API controller that shows Autofac injecting dependencies.
+    /// </summary>
+    /// <seealso cref="Microsoft.AspNetCore.Mvc.Controller" />
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {

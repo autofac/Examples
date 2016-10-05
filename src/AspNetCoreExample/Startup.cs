@@ -37,10 +37,11 @@ namespace AspNetCoreExample
             appLifetime.ApplicationStopped.Register(() => this.ApplicationContainer.Dispose());
         }
 
-        // This method gets called by the runtime after the Startup constructor.
-        // Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            // ASP.NET Core docs for Autofac are here:
+            // http://autofac.readthedocs.io/en/latest/integration/aspnetcore.html
+            //
             // Add framework services.
             services.AddMvc();
 
