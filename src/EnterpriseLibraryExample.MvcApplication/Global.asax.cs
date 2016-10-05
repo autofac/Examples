@@ -4,15 +4,15 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using Autofac;
-using Autofac.Integration.Mvc;
 using Autofac.Extras.CommonServiceLocator;
 using Autofac.Extras.EnterpriseLibraryConfigurator;
+using Autofac.Integration.Mvc;
 using Microsoft.Practices.EnterpriseLibrary.Common.Configuration;
 using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
 
 namespace EnterpriseLibraryExample.MvcApplication
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class MvcApplication : HttpApplication
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
@@ -31,39 +31,14 @@ namespace EnterpriseLibraryExample.MvcApplication
 
         }
 
-        protected void Application_Start()
-        {
-            // Register MVC-related dependencies.
-            var builder = new ContainerBuilder();
-            builder.RegisterControllers(typeof(MvcApplication).Assembly);
-            builder.RegisterModelBinders(typeof(MvcApplication).Assembly);
-            builder.RegisterModelBinderProvider();
-
-            // Register the EntLib classes.
-            builder.RegisterEnterpriseLibrary();
-
-            // Set the MVC dependency resolver to use Autofac.
-            var container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
-
-            // Set the EntLib service locator to use Autofac.
-            var autofacLocator = new AutofacServiceLocator(container);
-            EnterpriseLibraryContainer.Current = autofacLocator;
-
-            // Finish initialization of MVC-related items.
-            AreaRegistration.RegisterAllAreas();
-            RegisterGlobalFilters(GlobalFilters.Filters);
-            RegisterRoutes(RouteTable.Routes);
-        }
-
         /// <summary>
         /// Handles appliction-level errors by passing them through the Enterprise
         /// Library exception handling block.
         /// </summary>
         protected void Application_Error(object sender, EventArgs e)
         {
-            Exception originalException = Server.GetLastError();
-            ExceptionManager exceptionManager = null;
+            var originalException = Server.GetLastError();
+            var exceptionManager = (ExceptionManager)null;
             try
             {
                 exceptionManager = DependencyResolver.Current.GetService<ExceptionManager>();
@@ -85,7 +60,7 @@ namespace EnterpriseLibraryExample.MvcApplication
 
             // We have an EntLib ExceptionManager, so run it through the exception
             // handling policy outlined in web.config.
-            Exception exceptionToThrow = null;
+            var exceptionToThrow = (Exception)null;
             if (!exceptionManager.HandleException(originalException, "Global Web Exception Policy", out exceptionToThrow))
             {
                 // In this case, the exception was considered handled (or, at
@@ -111,6 +86,34 @@ namespace EnterpriseLibraryExample.MvcApplication
                 // info will totally be lost.
                 HttpContext.Current.AddError(exceptionToThrow);
             }
+        }
+
+        protected void Application_Start()
+        {
+            // Enterprise Library configuration documentation can be found here:
+            // http://autofac.readthedocs.io/en/latest/integration/entlib.html
+            //
+            // Register MVC-related dependencies.
+            var builder = new ContainerBuilder();
+            builder.RegisterControllers(typeof(MvcApplication).Assembly);
+            builder.RegisterModelBinders(typeof(MvcApplication).Assembly);
+            builder.RegisterModelBinderProvider();
+
+            // Register the EntLib classes.
+            builder.RegisterEnterpriseLibrary();
+
+            // Set the MVC dependency resolver to use Autofac.
+            var container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
+            // Set the EntLib service locator to use Autofac.
+            var autofacLocator = new AutofacServiceLocator(container);
+            EnterpriseLibraryContainer.Current = autofacLocator;
+
+            // Finish initialization of MVC-related items.
+            AreaRegistration.RegisterAllAreas();
+            RegisterGlobalFilters(GlobalFilters.Filters);
+            RegisterRoutes(RouteTable.Routes);
         }
     }
 }

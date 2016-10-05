@@ -1,10 +1,9 @@
 ﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
 
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
-    <title>Index</title>
+	<title>Index</title>
 </head>
 <body>
 <p>Select an exception type to throw from the controller action:</p>
