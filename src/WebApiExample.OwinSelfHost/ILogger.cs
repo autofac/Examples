@@ -1,4 +1,4 @@
-﻿namespace OwinWebApi.ConsoleApplication
+﻿namespace WebApiExample.OwinSelfHost
 {
     public interface ILogger
     {

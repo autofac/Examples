@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace OwinWebApi.ConsoleApplication
+namespace WebApiExample.OwinSelfHost
 {
     public class Logger : ILogger
     {

@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.Owin;
 
-namespace OwinWebApi.ConsoleApplication
+namespace WebApiExample.OwinSelfHost
 {
     public class SecondMiddleware : OwinMiddleware
     {
@@ -9,12 +9,12 @@ namespace OwinWebApi.ConsoleApplication
 
         public SecondMiddleware(OwinMiddleware next, ILogger logger) : base(next)
         {
-            _logger = logger;
+            this._logger = logger;
         }
 
         public override async Task Invoke(IOwinContext context)
         {
-            _logger.Write("Inside the 'Invoke' method of the '{0}' middleware.", GetType().Name);
+            this._logger.Write("Inside the 'Invoke' method of the '{0}' middleware.", GetType().Name);
 
             await Next.Invoke(context);
         }

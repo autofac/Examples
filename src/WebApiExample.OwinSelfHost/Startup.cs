@@ -4,16 +4,20 @@ using Autofac;
 using Autofac.Integration.WebApi;
 using Owin;
 
-namespace OwinWebApi.ConsoleApplication
+namespace WebApiExample.OwinSelfHost
 {
     public class Startup
     {
         public void Configuration(IAppBuilder app)
         {
+            // In OWIN you create your own HttpConfiguration rather than
+            // re-using the GlobalConfiguration.
             var config = new HttpConfiguration();
 
             config.Routes.MapHttpRoute(
-                "DefaultApi", "api/{controller}/{id}", new {id = RouteParameter.Optional});
+                "DefaultApi",
+                "api/{controller}/{id}",
+                new { id = RouteParameter.Optional });
 
             var builder = new ContainerBuilder();
 
@@ -33,12 +37,24 @@ namespace OwinWebApi.ConsoleApplication
             // Create and assign a dependency resolver for Web API to use.
             config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
 
-            // This should be the first middleware added to the IAppBuilder.
+            // The Autofac middleware should be the first middleware added to the IAppBuilder.
+            // If you "UseAutofacMiddleware" then all of the middleware in the container
+            // will be injected into the pipeline right after the Autofac lifetime scope
+            // is created/injected.
+            //
+            // Alternatively, you can control when container-based
+            // middleware is used by using "UseAutofacLifetimeScopeInjector" along with
+            // "UseMiddlewareFromContainer". As long as the lifetime scope injector
+            // comes first, everything is good.
             app.UseAutofacMiddleware(container);
+
+            // Again, the alternative to "UseAutofacMiddleware" is something like this:
+            // app.UseAutofacLifetimeScopeInjector(container);
+            // app.UseMiddlewareFromContainer<FirstMiddleware>();
+            // app.UseMiddlewareFromContainer<SecondMiddleware>();
 
             // Make sure the Autofac lifetime scope is passed to Web API.
             app.UseAutofacWebApi(config);
-
             app.UseWebApi(config);
         }
     }

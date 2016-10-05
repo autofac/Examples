@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultitenantExample.MvcAppli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultitenantExample.WcfService", "src\MultitenantExample.WcfService\MultitenantExample.WcfService.csproj", "{637C4B18-56BE-4E75-A7CD-7B79C489D33C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinWebApi.ConsoleApplication", "src\OwinWebApi.ConsoleApplication\OwinWebApi.ConsoleApplication.csproj", "{07EC4968-EE0B-4EA9-9ED8-165CED3BB62B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiExample.OwinSelfHost", "src\WebApiExample.OwinSelfHost\WebApiExample.OwinSelfHost.csproj", "{07EC4968-EE0B-4EA9-9ED8-165CED3BB62B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeMetadataExample", "src\AttributeMetadataExample\AttributeMetadataExample.csproj", "{38DDAE6D-0D1D-40D6-BF57-CAFED0322222}"
 EndProject
