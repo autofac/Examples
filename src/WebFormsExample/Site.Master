@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebFormsExample.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Autofac Web Forms Demo" />
+    <title><%: Page.Title %> - Autofac Web Forms Demo</title>
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+</head>
+<body>
+    <div class="page">
+
+        <div id="header">
+            <div id="title">
+                <h1>Autofac Web Forms Example</h1>
+            </div>
+
+            <div id="logindisplay">
+                &nbsp;
+            </div>
+
+            <div id="menucontainer">
+
+                <ul id="menu">
+                    <li><asp:HyperLink Text="Home" NavigateUrl="~/Default.aspx" runat="server" /></li>
+                    <li><asp:HyperLink Text="About" NavigateUrl="~/About.aspx" runat="server" /></li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div id="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
