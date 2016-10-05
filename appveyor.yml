@@ -13,9 +13,6 @@ assembly_info:
 
 configuration: Release
 
-before_build:
-- nuget restore
-
 build:
   verbosity: minimal
   publish_nuget: false
