@@ -3,12 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainServicesExample", "src\DomainServicesExample\DomainServicesExample.csproj", "{4EAB58EC-EEA6-4183-90B6-847183C9A75F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{225D06BB-05C9-4C2E-BE28-8E77DC0C67EE} = {225D06BB-05C9-4C2E-BE28-8E77DC0C67EE}
-		{E7BB91D2-EAB1-4E06-AC3A-AA865EFEF12B} = {E7BB91D2-EAB1-4E06-AC3A-AA865EFEF12B}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseLibraryExample.MvcApplication", "src\EnterpriseLibraryExample.MvcApplication\EnterpriseLibraryExample.MvcApplication.csproj", "{AA1B1114-2E7C-4B42-BC75-E91888C9C2C1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultitenantExample.ConsoleApplication", "src\MultitenantExample.ConsoleApplication\MultitenantExample.ConsoleApplication.csproj", "{7DC9BFB3-8F43-437D-81E2-BE540A017E70}"
@@ -18,16 +12,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultitenantExample.WcfService", "src\MultitenantExample.WcfService\MultitenantExample.WcfService.csproj", "{637C4B18-56BE-4E75-A7CD-7B79C489D33C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwinWebApi.ConsoleApplication", "src\OwinWebApi.ConsoleApplication\OwinWebApi.ConsoleApplication.csproj", "{07EC4968-EE0B-4EA9-9ED8-165CED3BB62B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remember.Model", "src\Remember.Model\Remember.Model.csproj", "{225D06BB-05C9-4C2E-BE28-8E77DC0C67EE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remember.Persistence", "src\Remember.Persistence\Remember.Persistence.csproj", "{9DE8DA2E-AD61-4C49-ACEB-A790CD1E93DE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remember.Persistence.NHibernate", "src\Remember.Persistence.NHibernate\Remember.Persistence.NHibernate.csproj", "{6B8F4473-BF8C-4AF6-8D8C-1B93E628ACF3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remember.Service", "src\Remember.Service\Remember.Service.csproj", "{C02A73FD-8F99-4127-878F-01F929C67BAD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Remember.Web", "src\Remember.Web\Remember.Web.csproj", "{E7BB91D2-EAB1-4E06-AC3A-AA865EFEF12B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeMetadataExample", "src\AttributeMetadataExample\AttributeMetadataExample.csproj", "{38DDAE6D-0D1D-40D6-BF57-CAFED0322222}"
 EndProject
@@ -39,12 +23,6 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4EAB58EC-EEA6-4183-90B6-847183C9A75F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4EAB58EC-EEA6-4183-90B6-847183C9A75F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4EAB58EC-EEA6-4183-90B6-847183C9A75F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{4EAB58EC-EEA6-4183-90B6-847183C9A75F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4EAB58EC-EEA6-4183-90B6-847183C9A75F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4EAB58EC-EEA6-4183-90B6-847183C9A75F}.Release|x86.ActiveCfg = Release|Any CPU
 		{AA1B1114-2E7C-4B42-BC75-E91888C9C2C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AA1B1114-2E7C-4B42-BC75-E91888C9C2C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA1B1114-2E7C-4B42-BC75-E91888C9C2C1}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -77,36 +55,6 @@ Global
 		{07EC4968-EE0B-4EA9-9ED8-165CED3BB62B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07EC4968-EE0B-4EA9-9ED8-165CED3BB62B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{07EC4968-EE0B-4EA9-9ED8-165CED3BB62B}.Release|x86.ActiveCfg = Release|Any CPU
-		{225D06BB-05C9-4C2E-BE28-8E77DC0C67EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{225D06BB-05C9-4C2E-BE28-8E77DC0C67EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{225D06BB-05C9-4C2E-BE28-8E77DC0C67EE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{225D06BB-05C9-4C2E-BE28-8E77DC0C67EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{225D06BB-05C9-4C2E-BE28-8E77DC0C67EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{225D06BB-05C9-4C2E-BE28-8E77DC0C67EE}.Release|x86.ActiveCfg = Release|Any CPU
-		{9DE8DA2E-AD61-4C49-ACEB-A790CD1E93DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9DE8DA2E-AD61-4C49-ACEB-A790CD1E93DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9DE8DA2E-AD61-4C49-ACEB-A790CD1E93DE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{9DE8DA2E-AD61-4C49-ACEB-A790CD1E93DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9DE8DA2E-AD61-4C49-ACEB-A790CD1E93DE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9DE8DA2E-AD61-4C49-ACEB-A790CD1E93DE}.Release|x86.ActiveCfg = Release|Any CPU
-		{6B8F4473-BF8C-4AF6-8D8C-1B93E628ACF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6B8F4473-BF8C-4AF6-8D8C-1B93E628ACF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6B8F4473-BF8C-4AF6-8D8C-1B93E628ACF3}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{6B8F4473-BF8C-4AF6-8D8C-1B93E628ACF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6B8F4473-BF8C-4AF6-8D8C-1B93E628ACF3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6B8F4473-BF8C-4AF6-8D8C-1B93E628ACF3}.Release|x86.ActiveCfg = Release|Any CPU
-		{C02A73FD-8F99-4127-878F-01F929C67BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C02A73FD-8F99-4127-878F-01F929C67BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C02A73FD-8F99-4127-878F-01F929C67BAD}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{C02A73FD-8F99-4127-878F-01F929C67BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C02A73FD-8F99-4127-878F-01F929C67BAD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C02A73FD-8F99-4127-878F-01F929C67BAD}.Release|x86.ActiveCfg = Release|Any CPU
-		{E7BB91D2-EAB1-4E06-AC3A-AA865EFEF12B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E7BB91D2-EAB1-4E06-AC3A-AA865EFEF12B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E7BB91D2-EAB1-4E06-AC3A-AA865EFEF12B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{E7BB91D2-EAB1-4E06-AC3A-AA865EFEF12B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E7BB91D2-EAB1-4E06-AC3A-AA865EFEF12B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E7BB91D2-EAB1-4E06-AC3A-AA865EFEF12B}.Release|x86.ActiveCfg = Release|Any CPU
 		{38DDAE6D-0D1D-40D6-BF57-CAFED0322222}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{38DDAE6D-0D1D-40D6-BF57-CAFED0322222}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38DDAE6D-0D1D-40D6-BF57-CAFED0322222}.Debug|x86.ActiveCfg = Debug|Any CPU
