@@ -15,6 +15,7 @@ configuration: Release
 
 before_build:
 - nuget restore
+- ps: .\build-aspnetcore.ps1
 
 build:
   verbosity: minimal
