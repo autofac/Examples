@@ -1,23 +1,13 @@
+os: Visual Studio 2017
+
 environment:
-  package_semantic_version: 4.0.0
-  assembly_semantic_version: 4.0.0
-
-version: $(package_semantic_version).{build}
-
-assembly_info:
-  patch: true
-  file: '**\AssemblyInfo.*'
-  assembly_version: '$(assembly_semantic_version).0'
-  assembly_file_version: '$(appveyor_build_version)'
-  assembly_informational_version: '$(package_semantic_version)-CI-{build}'
-
-configuration: Release
+  matrix:
+  - solution_name: Examples.sln
+  - solution_name: src\ServiceFabricDemo\AutofacServiceFabricDemo.sln
+  
+build_script:
+  - msbuild %solution_name% /t:Rebuild /verbosity:Minimal /p:Configuration=Release
 
 before_build:
 - nuget restore
 - ps: .\build-aspnetcore.ps1
-
-build:
-  verbosity: minimal
-  publish_nuget: false
-  publish_nuget_symbols: false
