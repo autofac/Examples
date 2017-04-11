@@ -1,13 +1,4 @@
 os: Visual Studio 2017
 
-environment:
-  matrix:
-  - solution_name: Examples.sln
-  - solution_name: src\ServiceFabricDemo\AutofacServiceFabricDemo.sln
-  
 build_script:
-  - msbuild %solution_name% /t:Rebuild /verbosity:Minimal /p:Configuration=Release
-
-before_build:
-- nuget restore
-- ps: .\build-aspnetcore.ps1
+  -ps: .\build.ps1
