@@ -48,7 +48,7 @@
       <HintPath>..\packages\Autofac.Extras.DynamicProxy.4.2.1\lib\net45\Autofac.Extras.DynamicProxy.dll</HintPath>
     </Reference>
     <Reference Include="Autofac.Integration.ServiceFabric, Version=1.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=AMD64">
-      <HintPath>..\packages\Autofac.ServiceFabric.1.0.0-alpha2\lib\net452\Autofac.Integration.ServiceFabric.dll</HintPath>
+      <HintPath>..\packages\Autofac.ServiceFabric.1.0.0-alpha3\lib\net452\Autofac.Integration.ServiceFabric.dll</HintPath>
     </Reference>
     <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\packages\Castle.Core.4.0.0\lib\net45\Castle.Core.dll</HintPath>
@@ -101,7 +101,9 @@
     <None Include="PackageRoot\Config\Settings.xml" />
     <None Include="PackageRoot\ServiceManifest.xml" />
     <None Include="App.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DemoShared\DemoShared.csproj">
