@@ -8,7 +8,7 @@
     "windowsAuthentication": false
   },
   "profiles": {
-    "AutofacWebApiSample": {
+    "AspNetCoreExample": {
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

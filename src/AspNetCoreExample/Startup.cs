@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using Autofac;
-using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -10,6 +9,8 @@ using Microsoft.Extensions.Logging;
 
 namespace AspNetCoreExample
 {
+    // ASP.NET Core docs for Autofac are here:
+    // http://autofac.readthedocs.io/en/latest/integration/aspnetcore.html
     public class Startup
     {
         public Startup(IHostingEnvironment env)
@@ -21,44 +22,35 @@ namespace AspNetCoreExample
             this.Configuration = builder.Build();
         }
 
-        public IContainer ApplicationContainer { get; private set; }
-
         public IConfigurationRoot Configuration { get; private set; }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, IApplicationLifetime appLifetime)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole(this.Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
-
             app.UseMvc();
-
-            // If you want to dispose of resources that have been resolved in the
-            // application container, register for the "ApplicationStopped" event.
-            appLifetime.ApplicationStopped.Register(() => this.ApplicationContainer.Dispose());
         }
 
-        public IServiceProvider ConfigureServices(IServiceCollection services)
+        public void ConfigureContainer(ContainerBuilder builder)
         {
-            // ASP.NET Core docs for Autofac are here:
-            // http://autofac.readthedocs.io/en/latest/integration/aspnetcore.html
-            //
-            // Add framework services.
-            services.AddMvc();
-
-            // Create the Autofac container builder.
-            var builder = new ContainerBuilder();
-
             // Add any Autofac modules or registrations.
+            // This is called AFTER ConfigureServices so things you
+            // register here OVERRIDE things registered in ConfigureServices.
+            //
+            // You must have the call to AddAutofac in the Program.Main
+            // method or this won't be called.
             builder.RegisterModule(new AutofacModule());
+        }
 
-            // Populate the services.
-            builder.Populate(services);
-
-            // Build the container.
-            this.ApplicationContainer = builder.Build();
-
-            // Create and return the service provider.
-            return new AutofacServiceProvider(this.ApplicationContainer);
+        public void ConfigureServices(IServiceCollection services)
+        {
+            // Use extensions from libraries to register services in the
+            // collection. These will be automatically added to the
+            // Autofac container.
+            //
+            // Note if you have this method return an IServiceProvider
+            // then ConfigureContainer will not be called.
+            services.AddMvc();
         }
     }
 }
