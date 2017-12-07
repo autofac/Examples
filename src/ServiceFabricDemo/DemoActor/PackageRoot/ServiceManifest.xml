@@ -6,11 +6,11 @@
         <Extension Name="__GeneratedServiceType__" GeneratedId="44cd78fd-febe-43dc-9a3e-ea17d8629503|Persisted">
           <GeneratedNames xmlns="http://schemas.microsoft.com/2015/03/fabact-no-schema">
             <DefaultService Name="DemoActorService" />
-            <ServiceEndpoint Name="DemoActorServiceEndpoint" />
             <ReplicatorEndpoint Name="DemoActorServiceReplicatorEndpoint" />
             <ReplicatorConfigSection Name="DemoActorServiceReplicatorConfig" />
             <ReplicatorSecurityConfigSection Name="DemoActorServiceReplicatorSecurityConfig" />
             <StoreConfigSection Name="DemoActorServiceLocalStoreConfig" />
+            <ServiceEndpoint Name="DemoActorServiceEndpoint" />
           </GeneratedNames>
         </Extension>
       </Extensions>
