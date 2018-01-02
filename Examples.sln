@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseLibraryExample.MvcApplication", "src\EnterpriseLibraryExample.MvcApplication\EnterpriseLibraryExample.MvcApplication.csproj", "{AA1B1114-2E7C-4B42-BC75-E91888C9C2C1}"
 EndProject
@@ -23,6 +23,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExample", "src\WcfExample\WcfExample.csproj", "{91212914-7EAF-4FC7-88E8-5C8ED9A9DB4A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsExample", "src\WebFormsExample\WebFormsExample.csproj", "{F966402C-3F18-4FC4-B5E6-8049C79614B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreExample", "src\AspNetCoreExample\AspNetCoreExample.csproj", "{D07BC865-AD15-4859-AEA7-C58389DAB1F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,11 +98,20 @@ Global
 		{F966402C-3F18-4FC4-B5E6-8049C79614B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F966402C-3F18-4FC4-B5E6-8049C79614B8}.Release|x86.ActiveCfg = Release|Any CPU
 		{F966402C-3F18-4FC4-B5E6-8049C79614B8}.Release|x86.Build.0 = Release|Any CPU
+		{D07BC865-AD15-4859-AEA7-C58389DAB1F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D07BC865-AD15-4859-AEA7-C58389DAB1F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D07BC865-AD15-4859-AEA7-C58389DAB1F0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D07BC865-AD15-4859-AEA7-C58389DAB1F0}.Debug|x86.Build.0 = Debug|Any CPU
+		{D07BC865-AD15-4859-AEA7-C58389DAB1F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D07BC865-AD15-4859-AEA7-C58389DAB1F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D07BC865-AD15-4859-AEA7-C58389DAB1F0}.Release|x86.ActiveCfg = Release|Any CPU
+		{D07BC865-AD15-4859-AEA7-C58389DAB1F0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.5.0.505.0\lib\NET35
+		SolutionGuid = {1E9DBCC0-68AB-41C0-80C9-0848F7FE65A6}
 	EndGlobalSection
 EndGlobal
