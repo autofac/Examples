@@ -1,0 +1,24 @@
+{
+  "defaultAssembly": "ConfigurationExample",
+  "components": [
+    {
+      "type": "ConfigurationExample.InternalPlugin",
+      "services": [
+        {
+          "type": "ConfigurationExample.InternalPlugin"
+        },
+        {
+          "type": "ConfigurationExampleInterface.IPlugin, ConfigurationExampleInterface"
+        }
+      ]
+    },
+    {
+      "type": "ConfigurationExamplePlugin.ExternalPlugin, ConfigurationExamplePlugin",
+      "services": [
+        {
+          "type": "ConfigurationExampleInterface.IPlugin, ConfigurationExampleInterface"
+        }
+      ]
+    }
+  ]
+}

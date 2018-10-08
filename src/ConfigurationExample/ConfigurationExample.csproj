@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+    <PackageReference Include="Autofac.Configuration" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConfigurationExampleInterface\ConfigurationExampleInterface.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="autofac.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <ItemGroup>
+      <PluginAssembly Include="$(SolutionDir)\src\ConfigurationExamplePlugin\bin\$(ConfigurationName)\**\ConfigurationExamplePlugin.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PluginAssembly)" DestinationFolder="$(OutDir)" />
+  </Target>
+
+</Project>

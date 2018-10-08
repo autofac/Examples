@@ -28,6 +28,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreExample", "src\As
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericHostBuilderExample", "src\GenericHostBuilderExample\GenericHostBuilderExample.csproj", "{CE027ADF-C798-4989-B42C-BB571EBDAB03}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationExample", "src\ConfigurationExample\ConfigurationExample.csproj", "{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5} = {DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationExamplePlugin", "src\ConfigurationExamplePlugin\ConfigurationExamplePlugin.csproj", "{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationExampleInterface", "src\ConfigurationExampleInterface\ConfigurationExampleInterface.csproj", "{477A33C0-33EE-4176-BA3F-7EF56B46A811}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -116,12 +125,36 @@ Global
 		{CE027ADF-C798-4989-B42C-BB571EBDAB03}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CE027ADF-C798-4989-B42C-BB571EBDAB03}.Release|x86.ActiveCfg = Release|Any CPU
 		{CE027ADF-C798-4989-B42C-BB571EBDAB03}.Release|x86.Build.0 = Release|Any CPU
+		{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}.Debug|x86.Build.0 = Debug|Any CPU
+		{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}.Release|x86.ActiveCfg = Release|Any CPU
+		{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}.Release|x86.Build.0 = Release|Any CPU
+		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}.Debug|x86.Build.0 = Debug|Any CPU
+		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}.Release|x86.ActiveCfg = Release|Any CPU
+		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}.Release|x86.Build.0 = Release|Any CPU
+		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Debug|x86.Build.0 = Debug|Any CPU
+		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Release|x86.ActiveCfg = Release|Any CPU
+		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1E9DBCC0-68AB-41C0-80C9-0848F7FE65A6}
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.5.0.505.0\lib\NET35;packages\Unity.2.1.505.2\lib\NET35;packages\Unity.Interception.2.1.505.2\lib\NET35
+		SolutionGuid = {1E9DBCC0-68AB-41C0-80C9-0848F7FE65A6}
 	EndGlobalSection
 EndGlobal
