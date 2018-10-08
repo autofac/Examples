@@ -12,6 +12,14 @@ using Microsoft.Practices.EnterpriseLibrary.ExceptionHandling;
 
 namespace EnterpriseLibraryExample.MvcApplication
 {
+    /*
+     * You will notice a lot of pinned package versions in this app. Enterprise Library 5 is very finicky about
+     * which versions of Unity and CommonServiceLocator are in place. Package versions are pinned to avoid upgrades
+     * that will break EntLib 5.
+     *
+     * The EnterpriseLibraryConfigurator is not required for EntLib 6.
+     */
+
     public class MvcApplication : HttpApplication
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
