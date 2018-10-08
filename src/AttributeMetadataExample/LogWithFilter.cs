@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using Autofac.Extras.AttributeMetadata;
+using Autofac.Features.AttributeFilters;
 
 namespace AttributeMetadataExample
 {
@@ -8,7 +9,7 @@ namespace AttributeMetadataExample
     {
         private readonly ILogAppender _appender;
 
-        public LogWithFilter([WithMetadata("AppenderName", "attributed")]ILogAppender appender)
+        public LogWithFilter([MetadataFilter("AppenderName", "attributed")]ILogAppender appender)
         {
             this._appender = appender;
         }

@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using Autofac;
 using Autofac.Extras.AttributeMetadata;
+using Autofac.Features.AttributeFilters;
 using Autofac.Integration.Mef;
 
 namespace AttributeMetadataExample
@@ -41,7 +42,7 @@ namespace AttributeMetadataExample
 
             // Example: Consuming component using metadata filter attribute in constructor.
             builder.RegisterType<LogWithFilter>()
-                .WithAttributeFilter();
+                .WithAttributeFiltering();
 
             using (var container = builder.Build())
             {
