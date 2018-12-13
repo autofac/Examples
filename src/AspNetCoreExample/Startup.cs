@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 namespace AspNetCoreExample
 {
     // ASP.NET Core docs for Autofac are here:
-    // http://autofac.readthedocs.io/en/latest/integration/aspnetcore.html
+    // https://autofac.readthedocs.io/en/latest/integration/aspnetcore.html
     public class Startup
     {
         public Startup(IHostingEnvironment env)

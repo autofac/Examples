@@ -12,7 +12,7 @@ namespace WcfExample
         protected void Application_Start(object sender, EventArgs e)
         {
             // WCF integration docs are at:
-            // http://autofac.readthedocs.io/en/latest/integration/wcf.html
+            // https://autofac.readthedocs.io/en/latest/integration/wcf.html
             var builder = new ContainerBuilder();
 
             // Register your service implementations.

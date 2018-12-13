@@ -99,7 +99,7 @@ namespace EnterpriseLibraryExample.MvcApplication
         protected void Application_Start()
         {
             // Enterprise Library configuration documentation can be found here:
-            // http://autofac.readthedocs.io/en/latest/integration/entlib.html
+            // https://autofac.readthedocs.io/en/latest/integration/entlib.html
             //
             // Register MVC-related dependencies.
             var builder = new ContainerBuilder();

@@ -13,7 +13,7 @@ namespace AttributeMetadataExample
         private static void Main(string[] args)
         {
             // Attribute metadata documentation can be found here:
-            // http://autofac.readthedocs.io/en/latest/advanced/metadata.html
+            // https://autofac.readthedocs.io/en/latest/advanced/metadata.html
             var builder = new ContainerBuilder();
             builder.RegisterType<Log>();
 

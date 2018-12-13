@@ -39,9 +39,9 @@ namespace MvcExample
         protected void Application_Start()
         {
             // MVC setup documentation here:
-            // http://autofac.readthedocs.io/en/latest/integration/mvc.html
+            // https://autofac.readthedocs.io/en/latest/integration/mvc.html
             // WCF setup documentation here:
-            // http://autofac.readthedocs.io/en/latest/integration/wcf.html
+            // https://autofac.readthedocs.io/en/latest/integration/wcf.html
             //
             // First we'll register the MVC/WCF stuff...
             var builder = new ContainerBuilder();
