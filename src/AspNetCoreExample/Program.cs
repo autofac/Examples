@@ -1,9 +1,9 @@
 ﻿using System;
-using System.IO;
 using System.Linq;
+using Autofac.Extensions.DependencyInjection;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Autofac.Extensions.DependencyInjection;
 
 namespace AspNetCoreExample
 {
@@ -16,11 +16,8 @@ namespace AspNetCoreExample
             // a strongly-typed ContainerBuilder. If you don't
             // have the call to AddAutofac here, you won't get
             // ConfigureContainer support.
-            var host = new WebHostBuilder()
-                .UseKestrel()
+            var host = WebHost.CreateDefaultBuilder(args)
                 .ConfigureServices(services => services.AddAutofac())
-                .UseContentRoot(Directory.GetCurrentDirectory())
-                .UseIISIntegration()
                 .UseStartup<Startup>()
                 .Build();
 
