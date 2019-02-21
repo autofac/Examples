@@ -13,6 +13,7 @@ namespace ConfigurationExample
 {
     public class Program
     {
+        private static readonly string ExecutionFolder = Path.GetDirectoryName(typeof(Program).Assembly.Location);
         /* Plugins and configuration can be challenging to figure out in .NET Core since assembly
          * loading and type handling has slightly changed. This example shows how to use configuration
          * to selectively load things. Additional examples and resources:
@@ -40,7 +41,7 @@ namespace ConfigurationExample
                 // DISCLAIMER: NO PROMISES THIS IS SECURE. You may or may not want this strategy. It's up to
                 // you to determine if allowing any assembly in the directory to be loaded is acceptable. This
                 // is for demo purposes only.
-                return context.LoadFromAssemblyPath(Path.Combine(Directory.GetCurrentDirectory(), $"{assembly.Name}.dll"));
+                return context.LoadFromAssemblyPath(Path.Combine(ExecutionFolder, $"{assembly.Name}.dll"));
             };
 
             var config = new ConfigurationBuilder()
