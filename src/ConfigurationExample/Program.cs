@@ -1,19 +1,18 @@
-﻿using Autofac;
-using Autofac.Configuration;
-using ConfigurationExampleInterface;
-using Microsoft.Extensions.Configuration;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Runtime.Loader;
+using Autofac;
+using Autofac.Configuration;
+using ConfigurationExampleInterface;
+using Microsoft.Extensions.Configuration;
 
 namespace ConfigurationExample
 {
     public class Program
     {
-        private static readonly string ExecutionFolder = Path.GetDirectoryName(typeof(Program).Assembly.Location);
         /* Plugins and configuration can be challenging to figure out in .NET Core since assembly
          * loading and type handling has slightly changed. This example shows how to use configuration
          * to selectively load things. Additional examples and resources:
@@ -36,12 +35,13 @@ namespace ConfigurationExample
             // https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/corehost.md
             //
             // To verify, try commenting this out and you'll see that the config system can't load the external plugin type.
+            var executionFolder = Path.GetDirectoryName(typeof(Program).Assembly.Location);
             AssemblyLoadContext.Default.Resolving += (AssemblyLoadContext context, AssemblyName assembly) =>
             {
                 // DISCLAIMER: NO PROMISES THIS IS SECURE. You may or may not want this strategy. It's up to
                 // you to determine if allowing any assembly in the directory to be loaded is acceptable. This
                 // is for demo purposes only.
-                return context.LoadFromAssemblyPath(Path.Combine(ExecutionFolder, $"{assembly.Name}.dll"));
+                return context.LoadFromAssemblyPath(Path.Combine(executionFolder, $"{assembly.Name}.dll"));
             };
 
             var config = new ConfigurationBuilder()
