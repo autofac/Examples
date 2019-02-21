@@ -15,7 +15,9 @@ namespace AspNetCoreExample
             // ConfigureContainer to be supported in Startup with
             // a strongly-typed ContainerBuilder. If you don't
             // have the call to AddAutofac here, you won't get
-            // ConfigureContainer support.
+            // ConfigureContainer support. This also automatically
+            // calls Populate to put services you register during
+            // ConfigureServices into Autofac.
             var host = WebHost.CreateDefaultBuilder(args)
                 .ConfigureServices(services => services.AddAutofac())
                 .UseStartup<Startup>()
