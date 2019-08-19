@@ -24,7 +24,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExample", "src\WcfExampl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsExample", "src\WebFormsExample\WebFormsExample.csproj", "{F966402C-3F18-4FC4-B5E6-8049C79614B8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreExample", "src\AspNetCoreExample\AspNetCoreExample.csproj", "{D07BC865-AD15-4859-AEA7-C58389DAB1F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore3Example", "src\AspNetCore3Example\AspNetCore3Example.csproj", "{D07BC865-AD15-4859-AEA7-C58389DAB1F0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericHostBuilderExample", "src\GenericHostBuilderExample\GenericHostBuilderExample.csproj", "{CE027ADF-C798-4989-B42C-BB571EBDAB03}"
 EndProject
@@ -36,6 +36,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationExamplePlugin", "src\ConfigurationExamplePlugin\ConfigurationExamplePlugin.csproj", "{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationExampleInterface", "src\ConfigurationExampleInterface\ConfigurationExampleInterface.csproj", "{477A33C0-33EE-4176-BA3F-7EF56B46A811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreExample", "src\AspNetCoreExample\AspNetCoreExample.csproj", "{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +151,14 @@ Global
 		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Release|Any CPU.Build.0 = Release|Any CPU
 		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Release|x86.ActiveCfg = Release|Any CPU
 		{477A33C0-33EE-4176-BA3F-7EF56B46A811}.Release|x86.Build.0 = Release|Any CPU
+		{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}.Debug|x86.Build.0 = Debug|Any CPU
+		{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}.Release|x86.ActiveCfg = Release|Any CPU
+		{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
