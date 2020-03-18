@@ -39,7 +39,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationExampleInterfa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreExample", "src\AspNetCoreExample\AspNetCoreExample.csproj", "{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore3ChildlifetimeScope", "AspNetCore3ChildlifetimeScope\AspNetCore3ChildlifetimeScope.csproj", "{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore3ChildlifetimeScope", "src\AspNetCore3ChildlifetimeScope\AspNetCore3ChildlifetimeScope.csproj", "{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
