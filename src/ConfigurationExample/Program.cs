@@ -36,13 +36,7 @@ namespace ConfigurationExample
             //
             // To verify, try commenting this out and you'll see that the config system can't load the external plugin type.
             var executionFolder = Path.GetDirectoryName(typeof(Program).Assembly.Location);
-            AssemblyLoadContext.Default.Resolving += (AssemblyLoadContext context, AssemblyName assembly) =>
-            {
-                // DISCLAIMER: NO PROMISES THIS IS SECURE. You may or may not want this strategy. It's up to
-                // you to determine if allowing any assembly in the directory to be loaded is acceptable. This
-                // is for demo purposes only.
-                return context.LoadFromAssemblyPath(Path.Combine(executionFolder, $"{assembly.Name}.dll"));
-            };
+            AssemblyLoadContext.Default.Resolving += (AssemblyLoadContext context, AssemblyName assembly) => context.LoadFromAssemblyPath(Path.Combine(executionFolder, $"{assembly.Name}.dll"));
 
             var config = new ConfigurationBuilder()
                 .AddJsonFile("autofac.json")
