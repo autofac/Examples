@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace GenericHostBuilderExample
 {
-    internal class Program
+    internal static class Program
     {
         public static async Task Main(string[] args)
         {
