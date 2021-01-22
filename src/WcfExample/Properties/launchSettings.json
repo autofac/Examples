@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MultitenantExample.WcfService": {
+    "WcfExample": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {
