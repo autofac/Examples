@@ -25,4 +25,12 @@
   <ItemGroup>
     <Reference Include="System.Web" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Compile Update="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Content Include="**\*.svc" Exclude="obj/**;bin/**" />
+    <Content Include="**\Web.config" Exclude="obj/**;bin/**" />
+  </ItemGroup>
 </Project>
