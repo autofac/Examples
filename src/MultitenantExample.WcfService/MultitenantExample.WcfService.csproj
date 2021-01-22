@@ -6,6 +6,7 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <RootNamespace>MultitenantExample.WcfService</RootNamespace>
     <AssemblyName>MultitenantExample.WcfService</AssemblyName>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
     <ProjectCapability Include="DotNetCoreWeb" />
@@ -16,10 +17,12 @@
     <PackageReference Include="Autofac.Multitenant" Version="6.0.0" />
     <PackageReference Include="Autofac.Multitenant.Wcf" Version="6.0.0" />
     <PackageReference Include="Autofac.Wcf" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="5.0.0" />
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Web" />
