@@ -54,8 +54,7 @@ namespace MultitenantExample.MvcApplication.Controllers
 
         private object GetTenantId()
         {
-            var tenantId = (object)null;
-            var success = this.TenantIdentificationStrategy.TryIdentifyTenant(out tenantId);
+            var success = this.TenantIdentificationStrategy.TryIdentifyTenant(out object tenantId);
             if (!success || tenantId == null)
             {
                 return "[Default Tenant]";

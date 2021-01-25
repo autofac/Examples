@@ -34,8 +34,7 @@ namespace MultitenantExample.WcfService.ServiceImplementations
         /// </returns>
         public static GetServiceInfoResponse Build(IMultitenantService serviceImplementation, IDependency dependency, ITenantIdentificationStrategy tenantIdStrategy)
         {
-            var tenantId = (object)null;
-            var success = tenantIdStrategy.TryIdentifyTenant(out tenantId);
+            var success = tenantIdStrategy.TryIdentifyTenant(out object tenantId);
             if (!success || tenantId == null)
             {
                 tenantId = "[Default Tenant]";

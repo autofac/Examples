@@ -10,7 +10,7 @@ namespace AttributeMetadataExample
 {
     public class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             // Attribute metadata documentation can be found here:
             // https://autofac.readthedocs.io/en/latest/advanced/metadata.html
@@ -46,21 +46,20 @@ namespace AttributeMetadataExample
 
             using (var container = builder.Build())
             {
-                using (var scope = container.BeginLifetimeScope())
-                {
-                    // The standard logger will choose which appender to use
-                    // based on the specified metadata value.
-                    var log = scope.Resolve<Log>();
-                    log.Write("string-manual", "Message 1");
-                    log.Write("typed-manual", "Message 2");
-                    log.Write("interface-manual", "Message 3");
-                    log.Write("attributed", "Message 4");
+                using var scope = container.BeginLifetimeScope();
 
-                    // This logger selects the appropriate appender by
-                    // applying a filter attribute on the constructor parameter.
-                    var filteredLog = scope.Resolve<LogWithFilter>();
-                    filteredLog.Write("Message from filtered log");
-                }
+                // The standard logger will choose which appender to use
+                // based on the specified metadata value.
+                var log = scope.Resolve<Log>();
+                log.Write("string-manual", "Message 1");
+                log.Write("typed-manual", "Message 2");
+                log.Write("interface-manual", "Message 3");
+                log.Write("attributed", "Message 4");
+
+                // This logger selects the appropriate appender by
+                // applying a filter attribute on the constructor parameter.
+                var filteredLog = scope.Resolve<LogWithFilter>();
+                filteredLog.Write("Message from filtered log");
             }
 
             if (Debugger.IsAttached)

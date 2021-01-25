@@ -22,7 +22,7 @@ namespace ConfigurationExample
          * To avoid referencing the external plugin assembly, the solution has a build dependency on the ConfigurationExamplePlugin
          * project and this project uses a post-build copy to get the plugin assembly into the ConfigurationExample bin directory.
          */
-        public static void Main(string[] args)
+        public static void Main()
         {
             // THIS IS THE MAGIC!
             // .NET Core assembly loading is confusing. Things that happen to be in your bin folder don't just suddenly
@@ -50,17 +50,15 @@ namespace ConfigurationExample
             {
                 // Always resolve from a scope.
                 // https://autofac.readthedocs.io/en/latest/best-practices/index.html#always-resolve-dependencies-from-nested-lifetimes
-                using (var scope = container.BeginLifetimeScope())
-                {
-                    var plugin = scope.Resolve<InternalPlugin>();
-                    Console.WriteLine("Resolved specific plugin type: {0}", plugin.Name);
+                using var scope = container.BeginLifetimeScope();
+                var plugin = scope.Resolve<InternalPlugin>();
+                Console.WriteLine("Resolved specific plugin type: {0}", plugin.Name);
 
-                    Console.WriteLine("All available plugins:");
-                    var allPlugins = scope.Resolve<IEnumerable<IPlugin>>();
-                    foreach (var resolved in allPlugins)
-                    {
-                        Console.WriteLine("- {0}", resolved.Name);
-                    }
+                Console.WriteLine("All available plugins:");
+                var allPlugins = scope.Resolve<IEnumerable<IPlugin>>();
+                foreach (var resolved in allPlugins)
+                {
+                    Console.WriteLine("- {0}", resolved.Name);
                 }
             }
             catch (Exception ex)
