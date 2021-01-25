@@ -1,0 +1,105 @@
+{
+  "configurations": [
+    {
+      "cwd": "${workspaceFolder}/src/AspNetCore3Example",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "name": "AspNetCore3Example",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/AspNetCore3Example/bin/Debug/netcoreapp3.1/AspNetCore3Example.dll",
+      "request": "launch",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/api/Values"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      },
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "cwd": "${workspaceFolder}/src/AspNetCore3ChildlifetimeScope",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "name": "AspNetCore3ChildlifetimeScope",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/AspNetCore3ChildlifetimeScope/bin/Debug/netcoreapp3.1/AspNetCore3ChildlifetimeScope.dll",
+      "request": "launch",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/api/ApplicationA"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      },
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "cwd": "${workspaceFolder}/src/AspNetCoreExample",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "name": "AspNetCoreExample",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/AspNetCoreExample/bin/Debug/netcoreapp2.1/AspNetCoreExample.dll",
+      "request": "launch",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/api/Values"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      },
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/AttributeMetadataExample",
+      "name": "AttributeMetadataExample",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/AttributeMetadataExample/bin/Debug/netcoreapp3.1/AttributeMetadataExample.dll",
+      "request": "launch",
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/ConfigurationExample",
+      "name": "ConfigurationExample",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/ConfigurationExample/bin/Debug/netcoreapp3.1/ConfigurationExample.dll",
+      "request": "launch",
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/GenericHostBuilderExample",
+      "name": "GenericHostBuilderExample",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/GenericHostBuilderExample/bin/Debug/netcoreapp3.1/GenericHostBuilderExample.dll",
+      "request": "launch",
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/MultitenantExample.ConsoleApplication",
+      "name": "MultitenantExample.ConsoleApplication",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/MultitenantExample.ConsoleApplication/bin/Debug/netcoreapp3.1/MultitenantExample.ConsoleApplication.dll",
+      "request": "launch",
+      "stopAtEntry": false,
+      "type": "coreclr"
+    }
+  ],
+  "version": "0.2.0"
+}
