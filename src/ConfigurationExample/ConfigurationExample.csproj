@@ -20,11 +20,10 @@
     </None>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+  <Target Name="PostBuild" AfterTargets="Build">
     <ItemGroup>
-      <PluginAssembly Include="$(SolutionDir)\src\ConfigurationExamplePlugin\bin\$(ConfigurationName)\**\ConfigurationExamplePlugin.dll" />
+      <PluginAssembly Include="$(ProjectDir)..\ConfigurationExamplePlugin\bin\$(ConfigurationName)\**\ConfigurationExamplePlugin.dll" />
     </ItemGroup>
-    <Copy SourceFiles="@(PluginAssembly)" DestinationFolder="$(OutDir)" />
+    <Copy SourceFiles="@(PluginAssembly)" DestinationFolder="$(TargetDir)" SkipUnchangedFiles="true" />
   </Target>
-
 </Project>
