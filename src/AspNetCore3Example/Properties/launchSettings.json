@@ -8,7 +8,7 @@
     "windowsAuthentication": false
   },
   "profiles": {
-    "AspNetCoreExample": {
+    "AspNetCore3Example": {
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
