@@ -1,45 +1,47 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2010
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultitenantExample.ConsoleApplication", "src\MultitenantExample.ConsoleApplication\MultitenantExample.ConsoleApplication.csproj", "{7DC9BFB3-8F43-437D-81E2-BE540A017E70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultitenantExample.ConsoleApplication", "src\MultitenantExample.ConsoleApplication\MultitenantExample.ConsoleApplication.csproj", "{7DC9BFB3-8F43-437D-81E2-BE540A017E70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultitenantExample.MvcApplication", "src\MultitenantExample.MvcApplication\MultitenantExample.MvcApplication.csproj", "{6F1BD5E2-8195-40AD-85B5-CF1BFB3CCE7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultitenantExample.MvcApplication", "src\MultitenantExample.MvcApplication\MultitenantExample.MvcApplication.csproj", "{6F1BD5E2-8195-40AD-85B5-CF1BFB3CCE7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultitenantExample.WcfService", "src\MultitenantExample.WcfService\MultitenantExample.WcfService.csproj", "{637C4B18-56BE-4E75-A7CD-7B79C489D33C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MultitenantExample.WcfService", "src\MultitenantExample.WcfService\MultitenantExample.WcfService.csproj", "{637C4B18-56BE-4E75-A7CD-7B79C489D33C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiExample.OwinSelfHost", "src\WebApiExample.OwinSelfHost\WebApiExample.OwinSelfHost.csproj", "{07EC4968-EE0B-4EA9-9ED8-165CED3BB62B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiExample.OwinSelfHost", "src\WebApiExample.OwinSelfHost\WebApiExample.OwinSelfHost.csproj", "{07EC4968-EE0B-4EA9-9ED8-165CED3BB62B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AttributeMetadataExample", "src\AttributeMetadataExample\AttributeMetadataExample.csproj", "{38DDAE6D-0D1D-40D6-BF57-CAFED0322222}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AttributeMetadataExample", "src\AttributeMetadataExample\AttributeMetadataExample.csproj", "{38DDAE6D-0D1D-40D6-BF57-CAFED0322222}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcExample", "src\MvcExample\MvcExample.csproj", "{49C746F1-53F4-433C-ABE0-1938D8B508B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcExample", "src\MvcExample\MvcExample.csproj", "{49C746F1-53F4-433C-ABE0-1938D8B508B2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{91212914-7EAF-4FC7-88E8-5C8ED9A9DB4A} = {91212914-7EAF-4FC7-88E8-5C8ED9A9DB4A}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfExample", "src\WcfExample\WcfExample.csproj", "{91212914-7EAF-4FC7-88E8-5C8ED9A9DB4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WcfExample", "src\WcfExample\WcfExample.csproj", "{91212914-7EAF-4FC7-88E8-5C8ED9A9DB4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsExample", "src\WebFormsExample\WebFormsExample.csproj", "{F966402C-3F18-4FC4-B5E6-8049C79614B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebFormsExample", "src\WebFormsExample\WebFormsExample.csproj", "{F966402C-3F18-4FC4-B5E6-8049C79614B8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore3Example", "src\AspNetCore3Example\AspNetCore3Example.csproj", "{D07BC865-AD15-4859-AEA7-C58389DAB1F0}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericHostBuilderExample", "src\GenericHostBuilderExample\GenericHostBuilderExample.csproj", "{CE027ADF-C798-4989-B42C-BB571EBDAB03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationExample", "src\ConfigurationExample\ConfigurationExample.csproj", "{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurationExample", "src\ConfigurationExample\ConfigurationExample.csproj", "{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5} = {DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationExamplePlugin", "src\ConfigurationExamplePlugin\ConfigurationExamplePlugin.csproj", "{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurationExamplePlugin", "src\ConfigurationExamplePlugin\ConfigurationExamplePlugin.csproj", "{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationExampleInterface", "src\ConfigurationExampleInterface\ConfigurationExampleInterface.csproj", "{477A33C0-33EE-4176-BA3F-7EF56B46A811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurationExampleInterface", "src\ConfigurationExampleInterface\ConfigurationExampleInterface.csproj", "{477A33C0-33EE-4176-BA3F-7EF56B46A811}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreExample", "src\AspNetCoreExample\AspNetCoreExample.csproj", "{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreExample", "src\AspNetCoreExample\AspNetCoreExample.csproj", "{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore3ChildlifetimeScope", "src\AspNetCore3ChildlifetimeScope\AspNetCore3ChildlifetimeScope.csproj", "{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore3ChildlifetimeScope", "src\AspNetCore3ChildlifetimeScope\AspNetCore3ChildlifetimeScope.csproj", "{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{211BCB83-5603-4B9F-855D-F383FF68278A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore3NoStartupExample", "src\AspNetCore3NoStartupExample\AspNetCore3NoStartupExample.csproj", "{3BBDC1BE-E4E3-40AA-B5B8-3C7A078985DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -163,29 +165,38 @@ Global
 		{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5}.Release|x86.ActiveCfg = Release|Any CPU
 		{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5}.Release|x86.Build.0 = Release|Any CPU
+		{3BBDC1BE-E4E3-40AA-B5B8-3C7A078985DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBDC1BE-E4E3-40AA-B5B8-3C7A078985DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBDC1BE-E4E3-40AA-B5B8-3C7A078985DB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3BBDC1BE-E4E3-40AA-B5B8-3C7A078985DB}.Debug|x86.Build.0 = Debug|Any CPU
+		{3BBDC1BE-E4E3-40AA-B5B8-3C7A078985DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBDC1BE-E4E3-40AA-B5B8-3C7A078985DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BBDC1BE-E4E3-40AA-B5B8-3C7A078985DB}.Release|x86.ActiveCfg = Release|Any CPU
+		{3BBDC1BE-E4E3-40AA-B5B8-3C7A078985DB}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.5.0.505.0\lib\NET35;packages\Unity.2.1.505.2\lib\NET35;packages\Unity.Interception.2.1.505.2\lib\NET35
-		SolutionGuid = {1E9DBCC0-68AB-41C0-80C9-0848F7FE65A6}
-	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5} = {211BCB83-5603-4B9F-855D-F383FF68278A}
-		{D07BC865-AD15-4859-AEA7-C58389DAB1F0} = {211BCB83-5603-4B9F-855D-F383FF68278A}
-		{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0} = {211BCB83-5603-4B9F-855D-F383FF68278A}
-		{38DDAE6D-0D1D-40D6-BF57-CAFED0322222} = {211BCB83-5603-4B9F-855D-F383FF68278A}
-		{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E} = {211BCB83-5603-4B9F-855D-F383FF68278A}
-		{477A33C0-33EE-4176-BA3F-7EF56B46A811} = {211BCB83-5603-4B9F-855D-F383FF68278A}
-		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5} = {211BCB83-5603-4B9F-855D-F383FF68278A}
-		{CE027ADF-C798-4989-B42C-BB571EBDAB03} = {211BCB83-5603-4B9F-855D-F383FF68278A}
 		{7DC9BFB3-8F43-437D-81E2-BE540A017E70} = {211BCB83-5603-4B9F-855D-F383FF68278A}
 		{6F1BD5E2-8195-40AD-85B5-CF1BFB3CCE7F} = {211BCB83-5603-4B9F-855D-F383FF68278A}
 		{637C4B18-56BE-4E75-A7CD-7B79C489D33C} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+		{07EC4968-EE0B-4EA9-9ED8-165CED3BB62B} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+		{38DDAE6D-0D1D-40D6-BF57-CAFED0322222} = {211BCB83-5603-4B9F-855D-F383FF68278A}
 		{49C746F1-53F4-433C-ABE0-1938D8B508B2} = {211BCB83-5603-4B9F-855D-F383FF68278A}
 		{91212914-7EAF-4FC7-88E8-5C8ED9A9DB4A} = {211BCB83-5603-4B9F-855D-F383FF68278A}
-		{07EC4968-EE0B-4EA9-9ED8-165CED3BB62B} = {211BCB83-5603-4B9F-855D-F383FF68278A}
 		{F966402C-3F18-4FC4-B5E6-8049C79614B8} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+		{D07BC865-AD15-4859-AEA7-C58389DAB1F0} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+		{CE027ADF-C798-4989-B42C-BB571EBDAB03} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+		{40F6A888-F5E2-4B1E-8913-1E8ED3E6621E} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+		{DA92D3F1-CCA8-45EA-BB95-74F0158E76C5} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+		{477A33C0-33EE-4176-BA3F-7EF56B46A811} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+		{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+		{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+		{3BBDC1BE-E4E3-40AA-B5B8-3C7A078985DB} = {211BCB83-5603-4B9F-855D-F383FF68278A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E9DBCC0-68AB-41C0-80C9-0848F7FE65A6}
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.ExceptionHandling.5.0.505.0\lib\NET35;packages\Unity.2.1.505.2\lib\NET35;packages\Unity.Interception.2.1.505.2\lib\NET35
 	EndGlobalSection
 EndGlobal
