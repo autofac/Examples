@@ -1,6 +1,12 @@
 {
   "cSpell.words": [
-    "autofac"
+    "appender",
+    "appenders",
+    "appsettings",
+    "autofac",
+    "multitenancy",
+    "multitenant",
+    "unconfigured"
   ],
   "omnisharp.enableEditorConfigSupport": true,
   "omnisharp.enableRoslynAnalyzers": true
