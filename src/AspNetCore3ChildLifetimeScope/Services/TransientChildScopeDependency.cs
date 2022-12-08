@@ -1,4 +1,4 @@
-namespace AspNetCore3ChildlifetimeScope.Services
+namespace AspNetCore3ChildLifetimeScope.Services
 {
     public class TransientChildScopeDependency
     {

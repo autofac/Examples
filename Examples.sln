@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurationExampleInterfa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreExample", "src\AspNetCoreExample\AspNetCoreExample.csproj", "{C04A5FDD-89B4-43EC-9E1F-F82238DFFCA0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore3ChildlifetimeScope", "src\AspNetCore3ChildlifetimeScope\AspNetCore3ChildlifetimeScope.csproj", "{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore3ChildLifetimeScope", "src\AspNetCore3ChildLifetimeScope\AspNetCore3ChildLifetimeScope.csproj", "{E044B08C-477E-4ED9-9E70-8E5C6F47E9D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{211BCB83-5603-4B9F-855D-F383FF68278A}"
 EndProject

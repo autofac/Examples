@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "AspNetCore3ChildlifetimeScope": {
+    "AspNetCore3ChildLifetimeScope": {
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

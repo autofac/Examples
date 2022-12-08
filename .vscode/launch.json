@@ -21,13 +21,13 @@
       "type": "coreclr"
     },
     {
-      "cwd": "${workspaceFolder}/src/AspNetCore3ChildlifetimeScope",
+      "cwd": "${workspaceFolder}/src/AspNetCore3ChildLifetimeScope",
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "name": "AspNetCore3ChildLifetimeScope",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/AspNetCore3ChildlifetimeScope/bin/Debug/netcoreapp3.1/AspNetCore3ChildlifetimeScope.dll",
+      "program": "${workspaceFolder}/src/AspNetCore3ChildLifetimeScope/bin/Debug/netcoreapp3.1/AspNetCore3ChildLifetimeScope.dll",
       "request": "launch",
       "serverReadyAction": {
         "action": "openExternally",

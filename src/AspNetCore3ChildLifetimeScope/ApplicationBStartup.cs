@@ -1,13 +1,13 @@
-using AspNetCore3ChildlifetimeScope.Services;
+using AspNetCore3ChildLifetimeScope.Services;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace AspNetCore3ChildlifetimeScope
+namespace AspNetCore3ChildLifetimeScope
 {
-    public class ApplicationAStartup
+    public class ApplicationBStartup
     {
         public void ConfigureServices(IServiceCollection services)
         {
@@ -22,19 +22,19 @@ namespace AspNetCore3ChildlifetimeScope
         }
 
         /// <summary>
-        /// This method is called by the <see cref="IHost"/> since we are registering <see cref="AutofacChildLifetimeScopeServiceProviderFactory"/> for Host A.
+        /// This method is called by the <see cref="IHost"/> since we are registering <see cref="AutofacChildLifetimeScopeServiceProviderFactory"/> for Host B.
         /// </summary>
-        /// <param name="configurationAdapter">An adapter that can take several registrations for the scope used in Application A.</param>
+        /// <param name="configurationAdapter">An adapter that can take several registrations for the scope used in Application B.</param>
         public void ConfigureContainer(AutofacChildLifetimeScopeConfigurationAdapter configurationAdapter)
         {
             // You must use an AutofacChildLifetimeScopeConfigurationAdapter
             // here instead of a ContainerBuilder.
             configurationAdapter.Add(
                 builder => builder
-                    .RegisterType<ApplicationAScopedDependency>()
+                    .RegisterType<ApplicationBScopedDependency>()
                     .AsSelf()
                     .InstancePerLifetimeScope()
-                );
+            );
         }
     }
 }

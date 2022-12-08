@@ -1,9 +1,9 @@
-using AspNetCore3ChildlifetimeScope.Services;
+using AspNetCore3ChildLifetimeScope.Services;
 using Autofac;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Hosting;
 
-namespace AspNetCore3ChildlifetimeScope.Controllers
+namespace AspNetCore3ChildLifetimeScope.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

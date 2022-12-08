@@ -1,11 +1,11 @@
 ﻿using System.Threading.Tasks;
-using AspNetCore3ChildlifetimeScope.Services;
+using AspNetCore3ChildLifetimeScope.Services;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace AspNetCore3ChildlifetimeScope
+namespace AspNetCore3ChildLifetimeScope
 {
     public static class Program
     {
