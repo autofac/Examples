@@ -3,11 +3,17 @@ image:
 - Ubuntu
 - macOS
 
+configuration: Release
+
 environment:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   NUGET_XMLDOC_MODE: skip
 
+skip_tags: true
+
 clone_depth: 1
+
+test: false
 
 build_script:
 - pwsh: .\build.ps1
