@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 
-namespace AspNetCoreExample.Services
-{
-    public interface IValuesService
-    {
-        IEnumerable<string> FindAll();
+namespace AspNetCoreExample.Services;
 
-        string Find(int id);
-    }
+public interface IValuesService
+{
+    IEnumerable<string> FindAll();
+
+    string Find(int id);
 }

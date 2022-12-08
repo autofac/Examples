@@ -1,25 +1,24 @@
 ﻿using ConfigurationExampleInterface;
 
-namespace ConfigurationExample
+namespace ConfigurationExample;
+
+/// <summary>
+/// Implementation of the plugin interface that will be loaded from a default assembly. This will be registered
+/// via configuration rather than code.
+/// </summary>
+public class InternalPlugin : IPlugin
 {
     /// <summary>
-    /// Implementation of the plugin interface that will be loaded from a default assembly. This will be registered
-    /// via configuration rather than code.
+    /// Gets the name of the plugin.
     /// </summary>
-    public class InternalPlugin : IPlugin
+    /// <value>
+    /// Always returns <c>InternalPlugin</c>.
+    /// </value>
+    public string Name
     {
-        /// <summary>
-        /// Gets the name of the plugin.
-        /// </summary>
-        /// <value>
-        /// Always returns <c>InternalPlugin</c>.
-        /// </value>
-        public string Name
+        get
         {
-            get
-            {
-                return "InternalPlugin";
-            }
+            return "InternalPlugin";
         }
     }
 }

@@ -1,19 +1,18 @@
 ﻿using Autofac.Features.AttributeFilters;
 
-namespace AttributeMetadataExample
+namespace AttributeMetadataExample;
+
+public class LogWithFilter
 {
-    public class LogWithFilter
+    private readonly ILogAppender _appender;
+
+    public LogWithFilter([MetadataFilter("AppenderName", "attributed")]ILogAppender appender)
     {
-        private readonly ILogAppender _appender;
+        _appender = appender;
+    }
 
-        public LogWithFilter([MetadataFilter("AppenderName", "attributed")]ILogAppender appender)
-        {
-            _appender = appender;
-        }
-
-        public void Write(string message)
-        {
-            _appender.Write(message);
-        }
+    public void Write(string message)
+    {
+        _appender.Write(message);
     }
 }

@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace AttributeMetadataExample
+namespace AttributeMetadataExample;
+
+public class TypedManualMetadataAppender : ILogAppender
 {
-    public class TypedManualMetadataAppender : ILogAppender
+    public void Write(string message)
     {
-        public void Write(string message)
-        {
-            Console.WriteLine("Strongly-Typed Metadata on Registration: {0}", message);
-        }
+        Console.WriteLine("Strongly-Typed Metadata on Registration: {0}", message);
     }
 }

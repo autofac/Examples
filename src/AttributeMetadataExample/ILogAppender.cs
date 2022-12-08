@@ -1,7 +1,6 @@
-﻿namespace AttributeMetadataExample
+﻿namespace AttributeMetadataExample;
+
+public interface ILogAppender
 {
-    public interface ILogAppender
-    {
-        void Write(string message);
-    }
+    void Write(string message);
 }

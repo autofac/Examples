@@ -1,7 +1,6 @@
-﻿namespace AttributeMetadataExample
+﻿namespace AttributeMetadataExample;
+
+public interface IAppenderMetadata
 {
-    public interface IAppenderMetadata
-    {
-        string AppenderName { get; }
-    }
+    string AppenderName { get; }
 }

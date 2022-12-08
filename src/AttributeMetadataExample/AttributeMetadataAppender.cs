@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace AttributeMetadataExample
+namespace AttributeMetadataExample;
+
+[AppenderName("attributed")]
+public class AttributeMetadataAppender : ILogAppender
 {
-    [AppenderName("attributed")]
-    public class AttributeMetadataAppender : ILogAppender
+    public void Write(string message)
     {
-        public void Write(string message)
-        {
-            Console.WriteLine("Attribute Metadata: {0}", message);
-        }
+        Console.WriteLine("Attribute Metadata: {0}", message);
     }
 }

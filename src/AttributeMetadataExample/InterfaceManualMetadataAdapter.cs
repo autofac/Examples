@@ -1,12 +1,11 @@
 ﻿using System;
 
-namespace AttributeMetadataExample
+namespace AttributeMetadataExample;
+
+public class InterfaceManualMetadataAdapter : ILogAppender
 {
-    public class InterfaceManualMetadataAdapter : ILogAppender
+    public void Write(string message)
     {
-        public void Write(string message)
-        {
-            Console.WriteLine("Interface Metadata on Registration: {0}", message);
-        }
+        Console.WriteLine("Interface Metadata on Registration: {0}", message);
     }
 }
