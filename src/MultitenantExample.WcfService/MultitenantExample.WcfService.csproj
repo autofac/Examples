@@ -13,12 +13,12 @@
     <ProjectCapability Include="SupportsSystemWeb" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="6.0.0" />
+    <PackageReference Include="Autofac" Version="6.5.0" />
     <PackageReference Include="Autofac.Multitenant" Version="6.0.0" />
     <PackageReference Include="Autofac.Multitenant.Wcf" Version="6.0.0" />
-    <PackageReference Include="Autofac.Wcf" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="5.0.0" />
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0">
+    <PackageReference Include="Autofac.Wcf" Version="6.1.0" />
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="7.0.0" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>

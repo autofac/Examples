@@ -1,11 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>AttributeMetadataExample</RootNamespace>
     <AssemblyName>AttributeMetadataExample</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.5.0" />
     <PackageReference Include="Autofac.Extras.AttributeMetadata" Version="6.0.0" />
   </ItemGroup>
 </Project>

@@ -25,7 +25,7 @@
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "name": "AspNetCore3ChildlifetimeScope",
+      "name": "AspNetCore3ChildLifetimeScope",
       "preLaunchTask": "build",
       "program": "${workspaceFolder}/src/AspNetCore3ChildlifetimeScope/bin/Debug/netcoreapp3.1/AspNetCore3ChildlifetimeScope.dll",
       "request": "launch",
@@ -47,7 +47,7 @@
       },
       "name": "AspNetCoreExample",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/AspNetCoreExample/bin/Debug/netcoreapp2.1/AspNetCoreExample.dll",
+      "program": "${workspaceFolder}/src/AspNetCoreExample/bin/Debug/net6.0/AspNetCoreExample.dll",
       "request": "launch",
       "serverReadyAction": {
         "action": "openExternally",
@@ -65,7 +65,7 @@
       "cwd": "${workspaceFolder}/src/AttributeMetadataExample",
       "name": "AttributeMetadataExample",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/AttributeMetadataExample/bin/Debug/netcoreapp3.1/AttributeMetadataExample.dll",
+      "program": "${workspaceFolder}/src/AttributeMetadataExample/bin/Debug/net6.0/AttributeMetadataExample.dll",
       "request": "launch",
       "stopAtEntry": false,
       "type": "coreclr"
@@ -75,7 +75,7 @@
       "cwd": "${workspaceFolder}/src/ConfigurationExample",
       "name": "ConfigurationExample",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/ConfigurationExample/bin/Debug/netcoreapp3.1/ConfigurationExample.dll",
+      "program": "${workspaceFolder}/src/ConfigurationExample/bin/Debug/net6.0/ConfigurationExample.dll",
       "request": "launch",
       "stopAtEntry": false,
       "type": "coreclr"
@@ -85,7 +85,7 @@
       "cwd": "${workspaceFolder}/src/GenericHostBuilderExample",
       "name": "GenericHostBuilderExample",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/GenericHostBuilderExample/bin/Debug/netcoreapp3.1/GenericHostBuilderExample.dll",
+      "program": "${workspaceFolder}/src/GenericHostBuilderExample/bin/Debug/net6.0/GenericHostBuilderExample.dll",
       "request": "launch",
       "stopAtEntry": false,
       "type": "coreclr"
@@ -95,7 +95,7 @@
       "cwd": "${workspaceFolder}/src/MultitenantExample.ConsoleApplication",
       "name": "MultitenantExample.ConsoleApplication",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/MultitenantExample.ConsoleApplication/bin/Debug/netcoreapp3.1/MultitenantExample.ConsoleApplication.dll",
+      "program": "${workspaceFolder}/src/MultitenantExample.ConsoleApplication/bin/Debug/net6.0/MultitenantExample.ConsoleApplication.dll",
       "request": "launch",
       "stopAtEntry": false,
       "type": "coreclr"

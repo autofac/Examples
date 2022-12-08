@@ -1,4 +1,7 @@
 {
+  "cSpell.words": [
+    "autofac"
+  ],
   "omnisharp.enableEditorConfigSupport": true,
   "omnisharp.enableRoslynAnalyzers": true
 }

@@ -7,17 +7,17 @@
     <Version>1.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="6.0.0" />
-    <PackageReference Include="Autofac.Owin" Version="6.0.0" />
-    <PackageReference Include="Autofac.WebApi2" Version="6.0.0" />
-    <PackageReference Include="Autofac.WebApi2.Owin" Version="6.0.0" />
-    <PackageReference Include="Microsoft.AspNet.WebApi.OwinSelfHost" Version="5.2.7" />
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0">
+    <PackageReference Include="Autofac" Version="6.5.0" />
+    <PackageReference Include="Autofac.Owin" Version="7.0.0" />
+    <PackageReference Include="Autofac.WebApi2" Version="6.1.1" />
+    <PackageReference Include="Autofac.WebApi2.Owin" Version="6.1.0" />
+    <PackageReference Include="Microsoft.AspNet.WebApi.OwinSelfHost" Version="5.2.9" />
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.Owin.Host.HttpListener" Version="4.1.1" />
-    <PackageReference Include="Microsoft.Owin.Hosting" Version="4.1.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Microsoft.Owin.Host.HttpListener" Version="4.2.2" />
+    <PackageReference Include="Microsoft.Owin.Hosting" Version="4.2.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 </Project>
