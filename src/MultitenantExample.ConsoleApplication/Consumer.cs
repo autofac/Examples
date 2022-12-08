@@ -22,7 +22,7 @@ namespace MultitenantExample.ConsoleApplication
         /// <param name="dependency">The dependency this class consumes.</param>
         public Consumer(IDependency dependency)
         {
-            this.Dependency = dependency;
+            Dependency = dependency;
         }
     }
 }

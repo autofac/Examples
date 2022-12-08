@@ -10,7 +10,7 @@ namespace AttributeMetadataExample
     {
         public AppenderNameAttribute(string appenderName)
         {
-            this.AppenderName = appenderName;
+            AppenderName = appenderName;
         }
 
         public string AppenderName { get; private set; }

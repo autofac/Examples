@@ -4,7 +4,7 @@ namespace AspNetCore3ChildLifetimeScope.Services
     {
         public override string ToString()
         {
-            return $"{this.GetType().Name} registered in the root and available to ApplicationA and ApplicationB";
+            return $"{GetType().Name} registered in the root and available to ApplicationA and ApplicationB";
         }
     }
 }

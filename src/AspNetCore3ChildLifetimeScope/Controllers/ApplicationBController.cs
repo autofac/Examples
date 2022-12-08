@@ -9,28 +9,28 @@ namespace AspNetCore3ChildLifetimeScope.Controllers
     [Route("api/[controller]")]
     public class ApplicationBController : ControllerBase
     {
-        private readonly ApplicationBScopedDependency applicationBScopedDependency;
-        private readonly TransientChildScopeDependency transientChildScopeDependency;
-        private readonly SingletonRootDependency singletonRootDependency;
+        private readonly ApplicationBScopedDependency _applicationBScopedDependency;
+        private readonly TransientChildScopeDependency _transientChildScopeDependency;
+        private readonly SingletonRootDependency _singletonRootDependency;
 
         public ApplicationBController(
             ApplicationBScopedDependency applicationBScopedDependency,
             TransientChildScopeDependency transientChildScopeDependency,
             SingletonRootDependency singletonRootDependency)
         {
-            this.applicationBScopedDependency = applicationBScopedDependency;
-            this.transientChildScopeDependency = transientChildScopeDependency;
-            this.singletonRootDependency = singletonRootDependency;
+            _applicationBScopedDependency = applicationBScopedDependency;
+            _transientChildScopeDependency = transientChildScopeDependency;
+            _singletonRootDependency = singletonRootDependency;
         }
 
         [HttpGet]
-        public IActionResult ShowMessage() => this.Ok(new
+        public IActionResult ShowMessage() => Ok(new
         {
             Message =
                 $"Resolved {nameof(ApplicationBScopedDependency)} from application-container. Resolved {nameof(TransientChildScopeDependency)} from {nameof(ILifetimeScope)} passed to the {nameof(IHost)}. Resolved {nameof(SingletonRootDependency)} from the container itself.",
-            ApplicationBScopedDependency = this.applicationBScopedDependency.ToString(),
-            TransientRootChildScopeDependency = this.transientChildScopeDependency.ToString(),
-            TransientRootDependency = this.singletonRootDependency.ToString(),
+            ApplicationBScopedDependency = _applicationBScopedDependency.ToString(),
+            TransientRootChildScopeDependency = _transientChildScopeDependency.ToString(),
+            TransientRootDependency = _singletonRootDependency.ToString(),
         });
     }
 }

@@ -4,7 +4,7 @@ namespace AspNetCore3ChildLifetimeScope.Services
     {
         public override string ToString()
         {
-            return $"{this.GetType().Name} registered only for ApplicationB";
+            return $"{GetType().Name} registered only for ApplicationB";
         }
     }
 }

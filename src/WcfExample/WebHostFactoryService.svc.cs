@@ -14,7 +14,7 @@ namespace WcfExample
     {
         public WebHostFactoryService(IDependency dependency)
         {
-            this.Dependency = dependency;
+            Dependency = dependency;
         }
 
         public IDependency Dependency { get; private set; }
@@ -23,8 +23,8 @@ namespace WcfExample
         {
             return new GetServiceInfoResponse
             {
-                DependencyInstanceId = this.Dependency.InstanceId,
-                ServiceImplementationTypeName = this.GetType().FullName
+                DependencyInstanceId = Dependency.InstanceId,
+                ServiceImplementationTypeName = GetType().FullName
             };
         }
     }

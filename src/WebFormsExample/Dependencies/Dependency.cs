@@ -13,7 +13,7 @@ namespace WebFormsExample.Dependencies
         /// </summary>
         public Dependency()
         {
-            this.InstanceId = Guid.NewGuid();
+            InstanceId = Guid.NewGuid();
         }
 
         /// <summary>

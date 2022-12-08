@@ -9,12 +9,12 @@ namespace WebApiExample.OwinSelfHost
 
         public SecondMiddleware(OwinMiddleware next, ILogger logger) : base(next)
         {
-            this._logger = logger;
+            _logger = logger;
         }
 
         public override async Task Invoke(IOwinContext context)
         {
-            this._logger.Write("Inside the 'Invoke' method of the '{0}' middleware.", GetType().Name);
+            _logger.Write("Inside the 'Invoke' method of the '{0}' middleware.", GetType().Name);
 
             await Next.Invoke(context);
         }

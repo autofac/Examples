@@ -15,7 +15,7 @@ namespace WebFormsExample
         protected void Page_Load(object sender, EventArgs e)
         {
             // Now you can use the property that was set for you.
-            this.DependencyLabel.Text = this.Dependency.InstanceId.ToString();
+            DependencyLabel.Text = Dependency.InstanceId.ToString();
         }
     }
 }

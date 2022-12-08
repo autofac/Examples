@@ -4,7 +4,7 @@ namespace AspNetCore3ChildLifetimeScope.Services
     {
         public override string ToString()
         {
-            return $"{this.GetType().Name} registered in the specific scope for ApplicationA and ApplicationB";
+            return $"{GetType().Name} registered in the specific scope for ApplicationA and ApplicationB";
         }
     }
 }

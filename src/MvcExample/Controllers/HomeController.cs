@@ -11,7 +11,7 @@ namespace MvcExample.Controllers
     {
         public HomeController(IService serviceClient)
         {
-            this.ServiceClient = serviceClient;
+            ServiceClient = serviceClient;
         }
 
         public IService ServiceClient { get; private set; }
@@ -24,12 +24,12 @@ namespace MvcExample.Controllers
         [CustomActionFilter]
         public async Task<ActionResult> Index()
         {
-            var serviceInfo = await this.ServiceClient.GetServiceInfoAsync(new GetServiceInfoRequest());
+            var serviceInfo = await ServiceClient.GetServiceInfoAsync(new GetServiceInfoRequest());
 
             var model = new DependencyValueModel
             {
                 // Comes from a dependency in the custom action filter.
-                FilterValue = (long)this.HttpContext.Items["filterValue"],
+                FilterValue = (long)HttpContext.Items["filterValue"],
 
                 // Comes from a dependency injected into the WCF service.
                 WcfServiceDependencyId = serviceInfo.DependencyInstanceId

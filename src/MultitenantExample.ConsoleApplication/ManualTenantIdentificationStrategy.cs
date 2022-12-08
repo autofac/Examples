@@ -38,7 +38,7 @@ namespace MultitenantExample.ConsoleApplication
         /// </returns>
         public bool TryIdentifyTenant(out object tenantId)
         {
-            if (this.CurrentTenantId.ToString() == "0")
+            if (CurrentTenantId.ToString() == "0")
             {
                 // 0 is the "default tenant ID"
                 tenantId = null;
@@ -46,7 +46,7 @@ namespace MultitenantExample.ConsoleApplication
             else
             {
                 // If the current tenant isn't default, return the actual ID.
-                tenantId = this.CurrentTenantId;
+                tenantId = CurrentTenantId;
             }
             return true;
         }

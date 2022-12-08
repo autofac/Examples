@@ -13,7 +13,7 @@ namespace MultitenantExample.ConsoleApplication
         /// </summary>
         public BaseDependency()
         {
-            this.InstanceId = Guid.NewGuid();
+            InstanceId = Guid.NewGuid();
         }
 
         /// <summary>

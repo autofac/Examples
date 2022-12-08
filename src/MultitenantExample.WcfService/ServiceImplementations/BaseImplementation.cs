@@ -8,8 +8,8 @@ namespace MultitenantExample.WcfService.ServiceImplementations
     {
         public BaseImplementation(IDependency dependency, ITenantIdentificationStrategy tenantIdStrategy)
         {
-            this.Dependency = dependency;
-            this.TenantIdentificationStrategy = tenantIdStrategy;
+            Dependency = dependency;
+            TenantIdentificationStrategy = tenantIdStrategy;
         }
 
         public IDependency Dependency { get; set; }
@@ -18,7 +18,7 @@ namespace MultitenantExample.WcfService.ServiceImplementations
 
         public GetServiceInfoResponse GetServiceInfo()
         {
-            return ServiceInfoBuilder.Build(this, this.Dependency, this.TenantIdentificationStrategy);
+            return ServiceInfoBuilder.Build(this, Dependency, TenantIdentificationStrategy);
         }
     }
 }

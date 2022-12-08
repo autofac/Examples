@@ -11,12 +11,12 @@ namespace AttributeMetadataExample
 
         public Log(IEnumerable<Meta<ILogAppender>> appenders)
         {
-            this._appenders = appenders;
+            _appenders = appenders;
         }
 
         public void Write(string destination, string message)
         {
-            var appender = this._appenders.First(a => a.Metadata["AppenderName"].Equals(destination));
+            var appender = _appenders.First(a => a.Metadata["AppenderName"].Equals(destination));
             appender.Value.Write(message);
         }
     }

@@ -14,7 +14,7 @@ namespace MvcExample.Dependencies
         /// </summary>
         public ViewDependency()
         {
-            this.InstanceId = Guid.NewGuid();
+            InstanceId = Guid.NewGuid();
         }
 
         /// <summary>

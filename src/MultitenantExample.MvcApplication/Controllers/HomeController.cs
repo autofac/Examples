@@ -13,10 +13,10 @@ namespace MultitenantExample.MvcApplication.Controllers
     {
         public HomeController(IDependency dependency, ITenantIdentificationStrategy tenantIdStrategy, IMultitenantService standardService, IMetadataConsumer metadataService)
         {
-            this.Dependency = dependency;
-            this.TenantIdentificationStrategy = tenantIdStrategy;
-            this.StandardServiceProxy = standardService;
-            this.MetadataServiceProxy = metadataService;
+            Dependency = dependency;
+            TenantIdentificationStrategy = tenantIdStrategy;
+            StandardServiceProxy = standardService;
+            MetadataServiceProxy = metadataService;
         }
 
         public IDependency Dependency { get; set; }
@@ -34,7 +34,7 @@ namespace MultitenantExample.MvcApplication.Controllers
 
         public virtual ActionResult Index()
         {
-            var model = this.BuildIndexModel();
+            var model = BuildIndexModel();
             return View(model);
         }
 
@@ -42,19 +42,19 @@ namespace MultitenantExample.MvcApplication.Controllers
         {
             var model = new IndexModel()
             {
-                ControllerTypeName = this.GetType().Name,
-                DependencyInstanceId = this.Dependency.InstanceId,
-                DependencyTypeName = this.Dependency.GetType().Name,
-                TenantId = this.GetTenantId(),
-                StandardServiceInfo = this.StandardServiceProxy.GetServiceInfo(new MultitenantExample.MvcApplication.WcfService.GetServiceInfoRequest()),
-                MetadataServiceInfo = this.MetadataServiceProxy.GetServiceInfo(new MultitenantExample.MvcApplication.WcfMetadataConsumer.GetServiceInfoRequest())
+                ControllerTypeName = GetType().Name,
+                DependencyInstanceId = Dependency.InstanceId,
+                DependencyTypeName = Dependency.GetType().Name,
+                TenantId = GetTenantId(),
+                StandardServiceInfo = StandardServiceProxy.GetServiceInfo(new MultitenantExample.MvcApplication.WcfService.GetServiceInfoRequest()),
+                MetadataServiceInfo = MetadataServiceProxy.GetServiceInfo(new MultitenantExample.MvcApplication.WcfMetadataConsumer.GetServiceInfoRequest())
             };
             return model;
         }
 
         private object GetTenantId()
         {
-            var success = this.TenantIdentificationStrategy.TryIdentifyTenant(out object tenantId);
+            var success = TenantIdentificationStrategy.TryIdentifyTenant(out object tenantId);
             if (!success || tenantId == null)
             {
                 return "[Default Tenant]";

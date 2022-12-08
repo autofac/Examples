@@ -16,18 +16,18 @@ namespace WebApiExample.OwinSelfHost
 
         public CustomActionFilter(ILogger logger)
         {
-            this._logger = logger;
+            _logger = logger;
         }
 
         public Task OnActionExecutedAsync(HttpActionExecutedContext actionExecutedContext, CancellationToken cancellationToken)
         {
-            this._logger.Write("Inside the 'OnActionExecutedAsync' method of the custom action filter.");
+            _logger.Write("Inside the 'OnActionExecutedAsync' method of the custom action filter.");
             return Task.FromResult(0);
         }
 
         public Task OnActionExecutingAsync(HttpActionContext actionContext, CancellationToken cancellationToken)
         {
-            this._logger.Write("Inside the 'OnActionExecutingAsync' method of the custom action filter.");
+            _logger.Write("Inside the 'OnActionExecutingAsync' method of the custom action filter.");
             return Task.FromResult(0);
         }
     }

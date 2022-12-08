@@ -11,12 +11,12 @@ namespace AttributeMetadataExample
 
         public LogWithFilter([MetadataFilter("AppenderName", "attributed")]ILogAppender appender)
         {
-            this._appender = appender;
+            _appender = appender;
         }
 
         public void Write(string message)
         {
-            this._appender.Write(message);
+            _appender.Write(message);
         }
     }
 }

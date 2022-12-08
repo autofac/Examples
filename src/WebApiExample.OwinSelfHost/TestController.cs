@@ -8,12 +8,12 @@ namespace WebApiExample.OwinSelfHost
 
         public TestController(ILogger logger)
         {
-            this._logger = logger;
+            _logger = logger;
         }
 
         public string Get()
         {
-            this._logger.Write("Inside the 'Get' method of the '{0}' controller.", GetType().Name);
+            _logger.Write("Inside the 'Get' method of the '{0}' controller.", GetType().Name);
 
             return "Hello, world!";
         }
