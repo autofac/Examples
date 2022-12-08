@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace AttributeMetadataExample
+﻿namespace AttributeMetadataExample
 {
     public class AppenderMetadata
     {

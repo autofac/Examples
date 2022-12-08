@@ -1,5 +1,4 @@
 ﻿using System;
-using MultitenantExample.MvcApplication.WcfService;
 
 namespace MultitenantExample.MvcApplication.Models
 {

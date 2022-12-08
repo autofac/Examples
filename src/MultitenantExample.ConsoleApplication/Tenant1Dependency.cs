@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MultitenantExample.ConsoleApplication
+﻿namespace MultitenantExample.ConsoleApplication
 {
     /// <summary>
     /// Tenant-specific dependency for Tenant 1.

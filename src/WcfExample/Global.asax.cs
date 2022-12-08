@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Web;
 using Autofac;
 using Autofac.Integration.Wcf;

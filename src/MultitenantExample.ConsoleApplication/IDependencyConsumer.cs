@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MultitenantExample.ConsoleApplication
+﻿namespace MultitenantExample.ConsoleApplication
 {
     /// <summary>
     /// Demonstration interface for a consumer of a dependency. Enables the ability

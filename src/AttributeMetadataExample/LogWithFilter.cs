@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using Autofac.Extras.AttributeMetadata;
-using Autofac.Features.AttributeFilters;
+﻿using Autofac.Features.AttributeFilters;
 
 namespace AttributeMetadataExample
 {

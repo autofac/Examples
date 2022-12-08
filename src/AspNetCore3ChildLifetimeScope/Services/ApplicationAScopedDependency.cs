@@ -1,6 +1,3 @@
-using System;
-using Autofac.Extensions.DependencyInjection;
-
 namespace AspNetCore3ChildLifetimeScope.Services
 {
     public class ApplicationAScopedDependency

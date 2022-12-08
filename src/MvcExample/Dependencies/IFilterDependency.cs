@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-
-namespace MvcExample.Dependencies
+﻿namespace MvcExample.Dependencies
 {
     /// <summary>
     /// Simple dependency to show injection into an action filter.

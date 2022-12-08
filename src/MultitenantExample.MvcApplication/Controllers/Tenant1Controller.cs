@@ -1,5 +1,4 @@
-﻿using System;
-using Autofac.Multitenant;
+﻿using Autofac.Multitenant;
 using MultitenantExample.MvcApplication.Dependencies;
 using MultitenantExample.MvcApplication.WcfMetadataConsumer;
 using MultitenantExample.MvcApplication.WcfService;

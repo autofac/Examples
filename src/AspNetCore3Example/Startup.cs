@@ -1,6 +1,4 @@
-﻿using System;
-using Autofac;
-using Autofac.Diagnostics;
+﻿using Autofac;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 

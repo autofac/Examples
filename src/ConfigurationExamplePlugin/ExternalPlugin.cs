@@ -1,5 +1,4 @@
 ﻿using ConfigurationExampleInterface;
-using System;
 
 namespace ConfigurationExamplePlugin
 {

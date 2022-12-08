@@ -13,7 +13,7 @@ namespace MultitenantExample.WcfService
         /// Gets or sets the tenant ID handling the request.
         /// </summary>
         /// <value>
-        /// A <see cref="System.String"/> that represents the current tenant ID.
+        /// A <see cref="string"/> that represents the current tenant ID.
         /// </value>
         [MessageBodyMember]
         public string TenantId { get; set; }
@@ -22,16 +22,16 @@ namespace MultitenantExample.WcfService
         /// Gets or sets the service implementation type name.
         /// </summary>
         /// <value>
-        /// A <see cref="System.String"/> with the service implementation type name to display.
+        /// A <see cref="string"/> with the service implementation type name to display.
         /// </value>
         [MessageBodyMember]
         public string ServiceImplementationTypeName { get; set; }
 
         /// <summary>
-        /// Gets or sets the dependency type name.
+        /// /// Gets or sets the dependency type name.
         /// </summary>
         /// <value>
-        /// A <see cref="System.String"/> with the dependency type name to display.
+        /// A <see cref="string"/> with the dependency type name to display.
         /// </value>
         [MessageBodyMember]
         public string DependencyTypeName { get; set; }

@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MultitenantExample.ConsoleApplication
+﻿namespace MultitenantExample.ConsoleApplication
 {
     /// <summary>
     /// Simple dependency consumer that takes a dependency as a constructor parameter.

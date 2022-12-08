@@ -1,5 +1,4 @@
-﻿using System;
-using Autofac.Multitenant;
+﻿using Autofac.Multitenant;
 using MultitenantExample.WcfService.Dependencies;
 
 namespace MultitenantExample.WcfService.ServiceImplementations

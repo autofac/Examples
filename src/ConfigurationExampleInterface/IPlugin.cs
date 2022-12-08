@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ConfigurationExampleInterface
+﻿namespace ConfigurationExampleInterface
 {
     /// <summary>
     /// Simple plugin interface used to illustrate assembly loading/plugin handling
