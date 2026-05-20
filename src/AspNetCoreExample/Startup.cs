@@ -1,8 +1,4 @@
-﻿using Autofac;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using Autofac;
 
 namespace AspNetCoreExample;
 
@@ -10,21 +6,19 @@ namespace AspNetCoreExample;
 // https://autofac.readthedocs.io/en/latest/integration/aspnetcore.html
 public class Startup
 {
-    public Startup(IWebHostEnvironment env)
+    public Startup(IConfiguration configuration)
     {
-        var builder = new ConfigurationBuilder()
-            .SetBasePath(env.ContentRootPath)
-            .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-            .AddEnvironmentVariables();
-        Configuration = builder.Build();
+        Configuration = configuration;
     }
 
-    public IConfigurationRoot Configuration { get; private set; }
+    public IConfiguration Configuration { get; }
 
-    public void Configure(IApplicationBuilder app)
+    public void ConfigureServices(IServiceCollection services)
     {
-        app.UseRouting()
-            .UseEndpoints(opt => opt.MapControllers());
+        // Use extensions from libraries to register services in the
+        // collection. These will be automatically added to the
+        // Autofac container.
+        services.AddControllers();
     }
 
     public void ConfigureContainer(ContainerBuilder builder)
@@ -32,20 +26,12 @@ public class Startup
         // Add any Autofac modules or registrations.
         // This is called AFTER ConfigureServices so things you
         // register here OVERRIDE things registered in ConfigureServices.
-        //
-        // You must have the call to AddAutofac in the Program.Main
-        // method or this won't be called.
         builder.RegisterModule(new AutofacModule());
     }
 
-    public void ConfigureServices(IServiceCollection services)
+    public void Configure(IApplicationBuilder app)
     {
-        // Use extensions from libraries to register services in the
-        // collection. These will be automatically added to the
-        // Autofac container.
-        //
-        // Note if you have this method return an IServiceProvider
-        // then ConfigureContainer will not be called.
-        services.AddMvc();
+        app.UseRouting();
+        app.UseEndpoints(endpoints => endpoints.MapControllers());
     }
 }

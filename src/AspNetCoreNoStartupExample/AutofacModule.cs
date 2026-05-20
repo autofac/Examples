@@ -1,7 +1,8 @@
+using AspNetCoreNoStartupExample.Services;
 using Autofac;
-using AspNetCoreExample.Services;
+using Microsoft.Extensions.Logging;
 
-namespace AspNetCoreExample;
+namespace AspNetCoreNoStartupExample;
 
 public class AutofacModule : Module
 {

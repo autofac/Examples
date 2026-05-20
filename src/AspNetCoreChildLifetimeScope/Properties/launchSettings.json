@@ -1,12 +1,11 @@
 {
   "profiles": {
-    "AspNetCoreExample": {
+    "AspNetCoreChildLifetimeScope": {
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "launchBrowser": true,
-      "launchUrl": "http://localhost:5000/api/values"
+      "launchBrowser": false
     }
   }
 }

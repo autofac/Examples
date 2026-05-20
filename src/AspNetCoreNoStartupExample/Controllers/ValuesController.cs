@@ -1,7 +1,7 @@
-using AspNetCoreExample.Services;
+using AspNetCoreNoStartupExample.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCoreExample.Controllers;
+namespace AspNetCoreNoStartupExample.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
