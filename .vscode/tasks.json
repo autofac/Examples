@@ -3,7 +3,7 @@
     {
       "args": [
         "build",
-        "Examples.sln",
+        "Examples.slnx",
         "/property:GenerateFullPaths=true",
         "/consoleloggerparameters:NoSummary"
       ],

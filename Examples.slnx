@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AspNetCoreChildLifetimeScope/AspNetCoreChildLifetimeScope.csproj" />
+    <Project Path="src/AspNetCoreExample/AspNetCoreExample.csproj" />
+    <Project Path="src/AspNetCoreNoStartupExample/AspNetCoreNoStartupExample.csproj" />
+    <Project Path="src/AttributeMetadataExample/AttributeMetadataExample.csproj" />
+    <Project Path="src/ConfigurationExample/ConfigurationExample.csproj" />
+    <Project Path="src/ConfigurationExampleInterface/ConfigurationExampleInterface.csproj" />
+    <Project Path="src/ConfigurationExamplePlugin/ConfigurationExamplePlugin.csproj" />
+    <Project Path="src/GenericHostBuilderExample/GenericHostBuilderExample.csproj" />
+    <Project Path="src/MultitenantExample.ConsoleApplication/MultitenantExample.ConsoleApplication.csproj" />
+    <Project Path="src/MultitenantExample.MvcApplication/MultitenantExample.MvcApplication.csproj" />
+    <Project Path="src/MultitenantExample.WcfService/MultitenantExample.WcfService.csproj" />
+    <Project Path="src/MvcExample/MvcExample.csproj" />
+    <Project Path="src/WcfExample/WcfExample.csproj" />
+    <Project Path="src/WebApiExample.OwinSelfHost/WebApiExample.OwinSelfHost.csproj" />
+    <Project Path="src/WebFormsExample/WebFormsExample.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,15 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+      - "feature/**"
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  build:
+    uses: ./.github/workflows/build.yml

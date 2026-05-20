@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "AspNetCoreExample": {
+    "AspNetCoreNoStartupExample": {
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

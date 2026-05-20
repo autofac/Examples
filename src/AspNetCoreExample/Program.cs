@@ -1,7 +1,4 @@
-﻿using Autofac.Extensions.DependencyInjection;
-using Microsoft.AspNetCore;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+using Autofac.Extensions.DependencyInjection;
 
 namespace AspNetCoreExample;
 
@@ -9,18 +6,14 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        // The ConfigureServices call here allows for
-        // ConfigureContainer to be supported in Startup with
-        // a strongly-typed ContainerBuilder. If you don't
-        // have the call to AddAutofac here, you won't get
-        // ConfigureContainer support. This also automatically
-        // calls Populate to put services you register during
-        // ConfigureServices into Autofac.
-        var host = WebHost.CreateDefaultBuilder(args)
-            .ConfigureServices(services => services.AddAutofac())
-            .UseStartup<Startup>()
-            .Build();
-
-        host.Run();
+        // UseServiceProviderFactory enables the ConfigureContainer method
+        // in the Startup class to receive a strongly-typed ContainerBuilder.
+        // Autofac automatically calls Populate to move services registered
+        // during ConfigureServices into the Autofac container.
+        Host.CreateDefaultBuilder(args)
+            .UseServiceProviderFactory(new AutofacServiceProviderFactory())
+            .ConfigureWebHostDefaults(webBuilder => webBuilder.UseStartup<Startup>())
+            .Build()
+            .Run();
     }
 }
