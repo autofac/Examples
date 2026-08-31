@@ -16,18 +16,18 @@
             <div id="title">
                 <h1>Multitenant Autofac Example</h1>
             </div>
-              
+
             <div id="logindisplay">
                 &nbsp;
-            </div> 
-            
+            </div>
+
             <div id="menucontainer">
-            
-                <ul id="menu">              
+
+                <ul id="menu">
                     <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
                     <li><%: Html.ActionLink("About", "About", "Home")%></li>
                 </ul>
-            
+
             </div>
         </div>
 

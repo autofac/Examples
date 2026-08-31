@@ -9,3 +9,6 @@
 
 # Convert to file-scoped namespaces.
 ccd9b352d4066839cbe2dff010df6ab464ea871e
+
+# Normalize whitespace and JSON key order via pre-commit.
+39b63732ecc81559303a7f1ab9d1283c37b279c9

@@ -2,7 +2,7 @@
 
 Example projects that consume and demonstrate [Autofac](https://autofac.org) functionality and integration.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/ckc94rt42bfhdt6j?svg=true)](https://ci.appveyor.com/project/Autofac/examples)
+[![Build status](https://github.com/autofac/Examples/actions/workflows/ci.yml/badge.svg)](https://github.com/autofac/Examples/actions/workflows/ci.yml)
 
 ## Reading the Examples
 
@@ -14,4 +14,4 @@ The examples attempt to stick pretty close to the [Autofac documentation](https:
 
 ## Building the Examples
 
-The `Examples.sln` file has all the samples in it _except_ the ServiceFabric example. ServiceFabric is in a child directory and has its own solution.
+`Examples.slnx` contains every sample. The ASP.NET MVC, Web Forms, WCF, and OWIN self-host samples target .NET Framework, so building the whole solution requires Windows; the rest build anywhere.
