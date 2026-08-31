@@ -38,7 +38,7 @@ p, ul
     line-height: 1.6em;
 }
 
-/* HEADINGS   
+/* HEADINGS
 ----------------------------------------------------------*/
 h1, h2, h3, h4, h5, h6
 {
@@ -70,17 +70,17 @@ h5, h6
     font-size: 1em;
 }
 
-/* this rule styles <h2> tags that are the 
+/* this rule styles <h2> tags that are the
 first child of the left and right table columns */
 .rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
 {
     margin-top: 0;
 }
 
-/* PRIMARY LAYOUT ELEMENTS   
+/* PRIMARY LAYOUT ELEMENTS
 ----------------------------------------------------------*/
 
-/* you can specify a greater or lesser percentage for the 
+/* you can specify a greater or lesser percentage for the
 page width. Or, you can specify an exact pixel width. */
 .page
 {
@@ -126,7 +126,7 @@ page width. Or, you can specify an exact pixel width. */
     font-size: .9em;
 }
 
-/* TAB MENU   
+/* TAB MENU
 ----------------------------------------------------------*/
 #menu
 {
@@ -180,35 +180,35 @@ page width. Or, you can specify an exact pixel width. */
     color: #000;
 }
 
-/* FORM LAYOUT ELEMENTS   
+/* FORM LAYOUT ELEMENTS
 ----------------------------------------------------------*/
 
-fieldset 
+fieldset
 {
     margin: 1em 0;
     padding: 1em;
     border: 1px solid #CCC;
 }
 
-fieldset p 
+fieldset p
 {
     margin: 2px 12px 10px 10px;
 }
 
-legend 
+legend
 {
     font-size: 1.1em;
     font-weight: 600;
     padding: 2px 4px 8px 4px;
 }
 
-input[type="text"] 
+input[type="text"]
 {
     width: 200px;
     border: 1px solid #CCC;
 }
 
-input[type="password"] 
+input[type="password"]
 {
     width: 200px;
     border: 1px solid #CCC;
@@ -217,15 +217,15 @@ input[type="password"]
 /* TABLE
 ----------------------------------------------------------*/
 
-table 
+table
 {
   border: solid 1px #e8eef4;
   border-collapse: collapse;
 }
 
-table td 
+table td
 {
-  padding: 5px;   
+  padding: 5px;
   border: solid 1px #e8eef4;
 }
 
@@ -233,11 +233,11 @@ table th
 {
   padding: 6px 5px;
   text-align: left;
-  background-color: #e8eef4; 
-  border: solid 1px #e8eef4;   
+  background-color: #e8eef4;
+  border: solid 1px #e8eef4;
 }
 
-/* MISC  
+/* MISC
 ----------------------------------------------------------*/
 .clear
 {
