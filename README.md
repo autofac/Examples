@@ -15,6 +15,7 @@ Each example has its own README with what it shows and how to run it.
 | [AspNetCoreExample](src/AspNetCoreExample/README.md) | A `Startup` class whose `ConfigureContainer` takes a `ContainerBuilder` | [`Autofac.Extensions.DependencyInjection`](https://github.com/autofac/Autofac.Extensions.DependencyInjection) |
 | [AspNetCoreNoStartupExample](src/AspNetCoreNoStartupExample/README.md) | The same wiring in the minimal hosting model, with no `Startup` class | [`Autofac.Extensions.DependencyInjection`](https://github.com/autofac/Autofac.Extensions.DependencyInjection) |
 | [AspNetCoreChildLifetimeScope](src/AspNetCoreChildLifetimeScope/README.md) | Two hosts sharing one container, each rooted in its own child scope | [`Autofac.Extensions.DependencyInjection`](https://github.com/autofac/Autofac.Extensions.DependencyInjection) |
+| [MultitenantExample.AspNetCore](src/MultitenantExample.AspNetCore/README.md) | Per-tenant registration overrides, with the tenant read from the query string | [`Autofac.AspNetCore.Multitenant`](https://github.com/autofac/Autofac.AspNetCore.Multitenant) |
 
 ### Hosting and core features
 
@@ -24,6 +25,9 @@ Each example has its own README with what it shows and how to run it.
 | [ConfigurationExample](src/ConfigurationExample/README.md) | Registering from `autofac.json`, including an unreferenced plugin assembly | [`Autofac.Configuration`](https://github.com/autofac/Autofac.Configuration) |
 | [AttributeMetadataExample](src/AttributeMetadataExample/README.md) | Metadata by string, class, interface, and attribute, then filtering on it | [`Autofac.Extras.AttributeMetadata`](https://github.com/autofac/Autofac.Extras.AttributeMetadata) |
 | [MultitenantExample.ConsoleApplication](src/MultitenantExample.ConsoleApplication/README.md) | Per-tenant overrides with no web request in sight | [`Autofac.Multitenant`](https://github.com/autofac/Autofac.Multitenant) |
+| [DynamicProxyExample](src/DynamicProxyExample/README.md) | Method interception, wired both on the registration and by attribute | [`Autofac.Extras.DynamicProxy`](https://github.com/autofac/Autofac.Extras.DynamicProxy) |
+| [PoolingExample](src/PoolingExample/README.md) | Reusing expensive instances across scopes, with a reset-on-return policy | [`Autofac.Pooling`](https://github.com/autofac/Autofac.Pooling) |
+| [DotGraphExample](src/DotGraphExample/README.md) | Capturing a resolve operation as a Graphviz graph for troubleshooting | [`Autofac.Diagnostics.DotGraph`](https://github.com/autofac/Autofac.Diagnostics.DotGraph) |
 
 ### .NET Framework
 

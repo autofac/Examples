@@ -3,14 +3,18 @@
     <Project Path="src/AspNetCoreChildLifetimeScope/AspNetCoreChildLifetimeScope.csproj" />
     <Project Path="src/AspNetCoreExample/AspNetCoreExample.csproj" />
     <Project Path="src/AspNetCoreNoStartupExample/AspNetCoreNoStartupExample.csproj" />
+    <Project Path="src/MultitenantExample.AspNetCore/MultitenantExample.AspNetCore.csproj" />
   </Folder>
   <Folder Name="/Hosting and Core Features/">
     <Project Path="src/AttributeMetadataExample/AttributeMetadataExample.csproj" />
     <Project Path="src/ConfigurationExample/ConfigurationExample.csproj" />
     <Project Path="src/ConfigurationExampleInterface/ConfigurationExampleInterface.csproj" />
     <Project Path="src/ConfigurationExamplePlugin/ConfigurationExamplePlugin.csproj" />
+    <Project Path="src/DotGraphExample/DotGraphExample.csproj" />
+    <Project Path="src/DynamicProxyExample/DynamicProxyExample.csproj" />
     <Project Path="src/GenericHostBuilderExample/GenericHostBuilderExample.csproj" />
     <Project Path="src/MultitenantExample.ConsoleApplication/MultitenantExample.ConsoleApplication.csproj" />
+    <Project Path="src/PoolingExample/PoolingExample.csproj" />
   </Folder>
   <Folder Name="/NET Framework/">
     <Project Path="src/MultitenantExample.MvcApplication/MultitenantExample.MvcApplication.csproj" />
