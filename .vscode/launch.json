@@ -31,6 +31,21 @@
       "type": "coreclr"
     },
     {
+      "cwd": "${workspaceFolder}/src/AspNetCoreMultitenantExample",
+      "launchSettingsProfile": "AspNetCoreMultitenantExample",
+      "name": "AspNetCoreMultitenantExample",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/AspNetCoreMultitenantExample/bin/Debug/net10.0/AspNetCoreMultitenantExample.dll",
+      "request": "launch",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\\\bNow listening on:\\\\s+(https?://\\\\S+)",
+        "uriFormat": "%s/api/tenant?tenant=alpha"
+      },
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
       "cwd": "${workspaceFolder}/src/AspNetCoreNoStartupExample",
       "launchSettingsProfile": "AspNetCoreNoStartupExample",
       "name": "AspNetCoreNoStartupExample",
@@ -67,6 +82,26 @@
     },
     {
       "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/DotGraphExample",
+      "name": "DotGraphExample",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/DotGraphExample/bin/Debug/net10.0/DotGraphExample.dll",
+      "request": "launch",
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/DynamicProxyExample",
+      "name": "DynamicProxyExample",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/DynamicProxyExample/bin/Debug/net10.0/DynamicProxyExample.dll",
+      "request": "launch",
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "console": "integratedTerminal",
       "cwd": "${workspaceFolder}/src/GenericHostBuilderExample",
       "name": "GenericHostBuilderExample",
       "preLaunchTask": "build",
@@ -81,6 +116,16 @@
       "name": "MultitenantExample.ConsoleApplication",
       "preLaunchTask": "build",
       "program": "${workspaceFolder}/src/MultitenantExample.ConsoleApplication/bin/Debug/net10.0/MultitenantExample.ConsoleApplication.dll",
+      "request": "launch",
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/PoolingExample",
+      "name": "PoolingExample",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/PoolingExample/bin/Debug/net10.0/PoolingExample.dll",
       "request": "launch",
       "stopAtEntry": false,
       "type": "coreclr"

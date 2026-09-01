@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "AspNetCoreMultitenantExample": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      },
+      "launchBrowser": false
+    }
+  }
+}

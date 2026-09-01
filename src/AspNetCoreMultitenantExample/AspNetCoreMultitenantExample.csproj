@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>../../build/AspNet.ruleset</CodeAnalysisRuleSet>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.AspNetCore.Multitenant" Version="9.0.0" />
+  </ItemGroup>
+
+</Project>
