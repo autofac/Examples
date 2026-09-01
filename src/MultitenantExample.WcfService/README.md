@@ -2,7 +2,7 @@
 
 A WCF service that resolves a different implementation per tenant, including how the tenant is identified from the incoming message.
 
-Packages: `Autofac`, `Autofac.Multitenant`, `Autofac.Multitenant.Wcf`, `Autofac.Wcf`
+Packages: [`Autofac`](https://github.com/autofac/Autofac), [`Autofac.Multitenant`](https://github.com/autofac/Autofac.Multitenant), [`Autofac.Multitenant.Wcf`](https://github.com/autofac/Autofac.Multitenant.Wcf), [`Autofac.Wcf`](https://github.com/autofac/Autofac.Wcf)
 
 Open `Examples.slnx` in Visual Studio on Windows and run the project under IIS Express. `MultitenantExample.MvcApplication` is its client.
 

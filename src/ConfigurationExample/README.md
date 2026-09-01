@@ -2,7 +2,7 @@
 
 Registering components from `autofac.json` rather than in code, including a plugin assembly the application holds no reference to at all.
 
-Packages: `Autofac`, `Autofac.Configuration`
+Packages: [`Autofac`](https://github.com/autofac/Autofac), [`Autofac.Configuration`](https://github.com/autofac/Autofac.Configuration)
 
 Run `dotnet run --project src/ConfigurationExample`. It prints the plugins it resolved from configuration.
 

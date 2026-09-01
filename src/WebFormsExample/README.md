@@ -2,7 +2,7 @@
 
 Property injection into Web Forms pages, which cannot take constructor dependencies, by way of an HTTP module.
 
-Packages: `Autofac`, `Autofac.Web`
+Packages: [`Autofac`](https://github.com/autofac/Autofac), [`Autofac.Web`](https://github.com/autofac/Autofac.Web)
 
 Open `Examples.slnx` in Visual Studio on Windows and run the project under IIS Express.
 
