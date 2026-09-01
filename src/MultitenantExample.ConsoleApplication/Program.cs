@@ -17,26 +17,20 @@ namespace MultitenantExample.ConsoleApplication;
 public class Program
 {
     /// <summary>
-    /// The container from which dependencies will be resolved.
-    /// </summary>
-    private static IContainer? _container;
-
-    /// <summary>
     /// Strategy used for identifying the current tenant with multitenant DI.
     /// </summary>
-    private static ManualTenantIdentificationStrategy? _tenantIdentifier;
+    private static readonly ManualTenantIdentificationStrategy _tenantIdentifier = new();
+
+    /// <summary>
+    /// The container from which dependencies will be resolved.
+    /// </summary>
+    private static readonly MultitenantContainer _container = ConfigureDependencies(_tenantIdentifier);
 
     /// <summary>
     /// Demo program entry point.
     /// </summary>
     public static void Main()
     {
-        // Initialize the tenant identification strategy.
-        _tenantIdentifier = new ManualTenantIdentificationStrategy();
-
-        // Set the application container to the multitenant container.
-        _container = ConfigureDependencies();
-
         // Explain what you're looking at.
         WriteInstructions();
 
@@ -47,7 +41,7 @@ public class Program
     /// <summary>
     /// Configures the multitenant dependency container.
     /// </summary>
-    private static IContainer ConfigureDependencies()
+    private static MultitenantContainer ConfigureDependencies(ManualTenantIdentificationStrategy tenantIdentifier)
     {
         // Register default dependencies in the application container.
         var builder = new ContainerBuilder();
@@ -56,7 +50,7 @@ public class Program
         var appContainer = builder.Build();
 
         // Create the multitenant container.
-        var mtc = new MultitenantContainer(_tenantIdentifier, appContainer);
+        var mtc = new MultitenantContainer(tenantIdentifier, appContainer);
 
         // Configure overrides for tenant 1. Tenant 1 registers their dependencies
         // as instance-per-dependency.

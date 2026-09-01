@@ -1,6 +1,6 @@
 ﻿namespace GenericHostBuilderExample;
 
-internal class Logger : ILogger
+internal sealed class Logger : ILogger
 {
     public async Task Log(string value)
     {

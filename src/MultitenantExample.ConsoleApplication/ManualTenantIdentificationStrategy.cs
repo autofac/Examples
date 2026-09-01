@@ -40,7 +40,7 @@ public class ManualTenantIdentificationStrategy : ITenantIdentificationStrategy
     /// </returns>
     public bool TryIdentifyTenant(out object? tenantId)
     {
-        if (CurrentTenantId.ToString() == "0")
+        if (CurrentTenantId?.ToString() == "0")
         {
             // 0 is the "default tenant ID"
             tenantId = null;

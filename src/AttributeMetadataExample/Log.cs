@@ -13,7 +13,7 @@ public class Log
 
     public void Write(string destination, string message)
     {
-        var appender = _appenders.First(a => a.Metadata["AppenderName"].Equals(destination));
+        var appender = _appenders.First(a => destination.Equals(a.Metadata["AppenderName"]));
         appender.Value.Write(message);
     }
 }

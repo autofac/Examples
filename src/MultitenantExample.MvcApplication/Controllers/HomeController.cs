@@ -38,11 +38,13 @@ public class HomeController : Controller
         get; set;
     }
 
+    [HttpGet]
     public ActionResult About()
     {
         return View();
     }
 
+    [HttpGet]
     public virtual ActionResult Index()
     {
         var model = BuildIndexModel();

@@ -14,6 +14,6 @@ public class CustomActionFilterAttribute : ActionFilterAttribute
     {
         // This filter adds a value from the dependency to the current context
         // so the controller can grab it and pass it to the view.
-        filterContext.HttpContext.Items["filterValue"] = Dependency.CurrentTicks;
+        filterContext.HttpContext.Items["filterValue"] = Dependency!.CurrentTicks;
     }
 }

@@ -17,11 +17,13 @@ public class HomeController : Controller
         get; private set;
     }
 
+    [HttpGet]
     public ActionResult About()
     {
         return View();
     }
 
+    [HttpGet]
     [CustomActionFilter]
     public async Task<ActionResult> Index()
     {

@@ -32,7 +32,7 @@ public class Program
         // https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/corehost.md
         //
         // To verify, try commenting this out and you'll see that the config system can't load the external plugin type.
-        var executionFolder = Path.GetDirectoryName(typeof(Program).Assembly.Location);
+        var executionFolder = Path.GetDirectoryName(typeof(Program).Assembly.Location) ?? AppContext.BaseDirectory;
         AssemblyLoadContext.Default.Resolving += (AssemblyLoadContext context, AssemblyName assembly) => context.LoadFromAssemblyPath(Path.Combine(executionFolder, $"{assembly.Name}.dll"));
 
         var config = new ConfigurationBuilder()

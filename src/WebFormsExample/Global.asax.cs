@@ -19,7 +19,7 @@ public class Global : HttpApplication, IContainerProviderAccessor
     {
         get
         {
-            return _containerProvider;
+            return _containerProvider!;
         }
     }
 

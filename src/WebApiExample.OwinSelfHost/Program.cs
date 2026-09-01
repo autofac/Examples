@@ -5,7 +5,7 @@ using Microsoft.Owin.Hosting;
 
 namespace WebApiExample.OwinSelfHost;
 
-internal class Program
+internal sealed class Program
 {
     private static void Main()
     {

@@ -17,6 +17,6 @@ public partial class _Default : Page
     protected void Page_Load(object sender, EventArgs e)
     {
         // Now you can use the property that was set for you.
-        DependencyLabel.Text = Dependency.InstanceId.ToString();
+        DependencyLabel.Text = Dependency!.InstanceId.ToString();
     }
 }
