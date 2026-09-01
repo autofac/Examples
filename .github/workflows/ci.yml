@@ -1,5 +1,9 @@
 name: Continuous Integration
 
+# All jobs are inlined here rather than split into a reusable workflow. This repo
+# publishes nothing and has no tests, so it can't consume the shared
+# autofac/.github ci.yml, and nothing else consumes ours.
+
 on:
   push:
     branches:
@@ -9,6 +13,95 @@ on:
     branches:
       - main
 
+# If multiple pushes happen quickly in succession, cancel the running build
+# and start a new one.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
+  # Deduplicate the PR-vs-feature-branch double build. A push to a feature
+  # branch that already has an open PR is skipped, because the pull_request
+  # event already covers it. Everything else proceeds. Combined with the
+  # cancel-in-progress concurrency above, this ensures exactly one build runs
+  # per change and superseded runs are cancelled.
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      should-build: ${{ steps.decide.outputs.should-build }}
+    steps:
+      - name: Decide whether to build
+        id: decide
+        uses: actions/github-script@v9
+        with:
+          script: |
+            // Always build for pull_request events and for non-feature pushes.
+            if (context.eventName !== 'push') {
+              core.info(`Event is ${context.eventName}; building.`);
+              core.setOutput('should-build', 'true');
+              return;
+            }
+            const ref = context.ref; // e.g. refs/heads/feature/foo or refs/tags/v1.2.3
+            if (!ref.startsWith('refs/heads/feature/')) {
+              core.info(`Push to ${ref} is not a feature branch; building.`);
+              core.setOutput('should-build', 'true');
+              return;
+            }
+            const branch = ref.replace('refs/heads/', '');
+            const { data: prs } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              head: `${context.repo.owner}:${branch}`,
+            });
+            if (prs.length > 0) {
+              core.info(`Open PR #${prs[0].number} exists for ${branch}; skipping push build (PR build covers it).`);
+              core.setOutput('should-build', 'false');
+            } else {
+              core.info(`No open PR for ${branch}; building feature branch.`);
+              core.setOutput('should-build', 'true');
+            }
+
+  # Runs on Windows because the .NET Framework examples won't restore on Linux.
+  dotnet-format:
+    needs: gate
+    if: ${{ needs.gate.outputs.should-build == 'true' }}
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+      - name: dotnet format
+        run: dotnet format Examples.slnx --verify-no-changes
+
+  pre-commit:
+    needs: gate
+    if: ${{ needs.gate.outputs.should-build == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: 3.x
+      # Enable npm links to allow pre-commit to install hooks that generate
+      # symlinks.
+      - name: Enable npm links
+        run: npm config set install-links true
+      - uses: pre-commit/action@v3.0.1
+
   build:
-    uses: ./.github/workflows/build.yml
+    needs: gate
+    if: ${{ needs.gate.outputs.should-build == 'true' }}
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.0.x
+      - name: Build
+        run: dotnet build Examples.slnx --configuration Release
