@@ -13,5 +13,8 @@ public interface IDependencyConsumer
     /// An <see cref="MultitenantExample.ConsoleApplication.IDependency"/>
     /// held by this specific consumer.
     /// </value>
-    IDependency Dependency { get; }
+    IDependency Dependency
+    {
+        get;
+    }
 }

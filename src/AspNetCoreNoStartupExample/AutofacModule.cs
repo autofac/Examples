@@ -1,4 +1,4 @@
-using AspNetCoreNoStartupExample.Services;
+﻿using AspNetCoreNoStartupExample.Services;
 using Autofac;
 using Microsoft.Extensions.Logging;
 

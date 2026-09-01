@@ -15,5 +15,8 @@ public interface IDependency
     /// A <see cref="System.Guid"/> that indicates the unique ID for the
     /// instance.
     /// </value>
-    Guid InstanceId { get; }
+    Guid InstanceId
+    {
+        get;
+    }
 }

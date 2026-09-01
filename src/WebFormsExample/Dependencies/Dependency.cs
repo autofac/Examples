@@ -22,6 +22,9 @@ namespace WebFormsExample.Dependencies
         /// A <see cref="System.Guid"/> that indicates the unique ID for the
         /// instance.
         /// </value>
-        public Guid InstanceId { get; private set; }
+        public Guid InstanceId
+        {
+            get; private set;
+        }
     }
 }

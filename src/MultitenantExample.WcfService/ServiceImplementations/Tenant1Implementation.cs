@@ -11,9 +11,15 @@ namespace MultitenantExample.WcfService.ServiceImplementations
             TenantIdentificationStrategy = tenantIdStrategy;
         }
 
-        public IDependency Dependency { get; set; }
+        public IDependency Dependency
+        {
+            get; set;
+        }
 
-        public ITenantIdentificationStrategy TenantIdentificationStrategy { get; set; }
+        public ITenantIdentificationStrategy TenantIdentificationStrategy
+        {
+            get; set;
+        }
 
         public GetServiceInfoResponse GetServiceInfo()
         {

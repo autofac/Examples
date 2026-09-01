@@ -12,6 +12,9 @@
         /// <value>
         /// A <see cref="string"/> with the plugin name. Likely just the type name for illustrative purposes.
         /// </value>
-        string Name { get; }
+        string Name
+        {
+            get;
+        }
     }
 }

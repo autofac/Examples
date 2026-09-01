@@ -9,7 +9,10 @@ namespace WebFormsExample
     public partial class _Default : Page
     {
         // This property will be set for you by the PropertyInjectionModule.
-        public IDependency Dependency { get; set; }
+        public IDependency Dependency
+        {
+            get; set;
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {

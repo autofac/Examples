@@ -21,11 +21,14 @@ public class ManualTenantIdentificationStrategy : ITenantIdentificationStrategy
     /// Gets or sets the current tenant ID. "0" is the "default tenant."
     /// </summary>
     /// <value>
-    /// An <see cref="System.Object"/> that will be returned by
+    /// An <see cref="object"/> that will be returned by
     /// <see cref="MultitenantExample.ConsoleApplication.ManualTenantIdentificationStrategy.TryIdentifyTenant"/>
     /// when the current tenant ID is requested.
     /// </value>
-    public object CurrentTenantId { get; set; }
+    public object CurrentTenantId
+    {
+        get; set;
+    }
 
     /// <summary>
     /// Returns the tenant ID that was manually specified in

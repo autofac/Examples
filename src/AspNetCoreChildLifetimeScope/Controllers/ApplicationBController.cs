@@ -1,4 +1,4 @@
-using AspNetCoreChildLifetimeScope.Services;
+﻿using AspNetCoreChildLifetimeScope.Services;
 using Autofac;
 using Microsoft.AspNetCore.Mvc;
 

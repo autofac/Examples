@@ -16,8 +16,8 @@ namespace MultitenantExample.MvcApplication.Controllers
     /// </remarks>
     public class Tenant1Controller : HomeController
     {
-        public Tenant1Controller(IDependency dependency, ITenantIdentificationStrategy tenantIdStrategy, IMultitenantService standardService, IMetadataConsumer metadataService) :
-            base(dependency, tenantIdStrategy, standardService, metadataService)
+        public Tenant1Controller(IDependency dependency, ITenantIdentificationStrategy tenantIdStrategy, IMultitenantService standardService, IMetadataConsumer metadataService)
+            : base(dependency, tenantIdStrategy, standardService, metadataService)
         {
         }
 

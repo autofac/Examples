@@ -1,9 +1,8 @@
 ﻿using System.Threading.Tasks;
 
-namespace GenericHostBuilderExample
+namespace GenericHostBuilderExample;
+
+internal interface ILogger
 {
-    internal interface ILogger
-    {
-        Task Log(string value);
-    }
+    Task Log(string value);
 }

@@ -1,4 +1,4 @@
-using AspNetCoreNoStartupExample.Services;
+﻿using AspNetCoreNoStartupExample.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCoreNoStartupExample.Controllers;

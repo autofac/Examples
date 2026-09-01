@@ -2,5 +2,8 @@
 
 public interface IAppenderMetadata
 {
-    string AppenderName { get; }
+    string AppenderName
+    {
+        get;
+    }
 }

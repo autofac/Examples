@@ -1,4 +1,4 @@
-using Autofac;
+﻿using Autofac;
 
 namespace AspNetCoreExample;
 
@@ -11,7 +11,10 @@ public class Startup
         Configuration = configuration;
     }
 
-    public IConfiguration Configuration { get; }
+    public IConfiguration Configuration
+    {
+        get;
+    }
 
     public void ConfigureServices(IServiceCollection services)
     {

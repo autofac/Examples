@@ -12,7 +12,10 @@ public class Consumer : IDependencyConsumer
     /// An <see cref="MultitenantExample.ConsoleApplication.IDependency"/>
     /// held by this specific consumer.
     /// </value>
-    public IDependency Dependency { get; private set; }
+    public IDependency Dependency
+    {
+        get; private set;
+    }
 
     /// <summary>
     /// Initializes a new instance of the <see cref="MultitenantExample.ConsoleApplication.Consumer"/> class.

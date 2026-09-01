@@ -2,5 +2,8 @@
 
 public class AppenderMetadata
 {
-    public string AppenderName { get; set; }
+    public string AppenderName
+    {
+        get; set;
+    }
 }

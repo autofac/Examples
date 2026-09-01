@@ -5,7 +5,10 @@ namespace MvcExample
 {
     public class CustomActionFilterAttribute : ActionFilterAttribute
     {
-        public IFilterDependency Dependency { get; set; }
+        public IFilterDependency Dependency
+        {
+            get; set;
+        }
 
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {

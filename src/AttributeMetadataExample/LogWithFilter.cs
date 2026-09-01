@@ -6,7 +6,7 @@ public class LogWithFilter
 {
     private readonly ILogAppender _appender;
 
-    public LogWithFilter([MetadataFilter("AppenderName", "attributed")]ILogAppender appender)
+    public LogWithFilter([MetadataFilter("AppenderName", "attributed")] ILogAppender appender)
     {
         _appender = appender;
     }
