@@ -13,6 +13,7 @@
     <Project Path="src/DotGraphExample/DotGraphExample.csproj" />
     <Project Path="src/DynamicProxyExample/DynamicProxyExample.csproj" />
     <Project Path="src/GenericHostBuilderExample/GenericHostBuilderExample.csproj" />
+    <Project Path="src/MiddlewarePipelineExample/MiddlewarePipelineExample.csproj" />
     <Project Path="src/MultitenantExample.ConsoleApplication/MultitenantExample.ConsoleApplication.csproj" />
     <Project Path="src/PoolingExample/PoolingExample.csproj" />
   </Folder>

@@ -28,6 +28,7 @@ Each example has its own README with what it shows and how to run it.
 | [DynamicProxyExample](src/DynamicProxyExample/README.md) | Method interception, wired both on the registration and by attribute | [`Autofac.Extras.DynamicProxy`](https://github.com/autofac/Autofac.Extras.DynamicProxy) |
 | [PoolingExample](src/PoolingExample/README.md) | Reusing expensive instances across scopes, with a reset-on-return policy | [`Autofac.Pooling`](https://github.com/autofac/Autofac.Pooling) |
 | [DotGraphExample](src/DotGraphExample/README.md) | Capturing a resolve operation as a Graphviz graph for troubleshooting | [`Autofac.Diagnostics.DotGraph`](https://github.com/autofac/Autofac.Diagnostics.DotGraph) |
+| [MiddlewarePipelineExample](src/MiddlewarePipelineExample/README.md) | Resolve middleware for auditing, timing, caching, ambient state, and scope guards | [`Autofac`](https://github.com/autofac/Autofac) |
 
 ### .NET Framework
 
