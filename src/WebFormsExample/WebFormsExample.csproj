@@ -4,8 +4,8 @@
     <OutputType>Library</OutputType>
     <OutputPath>bin/</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <RootNamespace>MvcExample</RootNamespace>
-    <AssemblyName>MvcExample</AssemblyName>
+    <RootNamespace>WebFormsExample</RootNamespace>
+    <AssemblyName>WebFormsExample</AssemblyName>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
