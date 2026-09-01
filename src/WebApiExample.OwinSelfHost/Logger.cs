@@ -1,12 +1,11 @@
 ﻿using System.Diagnostics;
 
-namespace WebApiExample.OwinSelfHost
+namespace WebApiExample.OwinSelfHost;
+
+public class Logger : ILogger
 {
-    public class Logger : ILogger
+    public void Write(string message, params object[] args)
     {
-        public void Write(string message, params object[] args)
-        {
-            Debug.WriteLine(message, args);
-        }
+        Debug.WriteLine(message, args);
     }
 }

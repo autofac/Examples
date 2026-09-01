@@ -1,19 +1,18 @@
-﻿namespace MvcExample.Dependencies
+﻿namespace MvcExample.Dependencies;
+
+/// <summary>
+/// Simple dependency to show injection into an action filter.
+/// </summary>
+public interface IFilterDependency
 {
     /// <summary>
-    /// Simple dependency to show injection into an action filter.
+    /// Gets the current date and time as ticks.
     /// </summary>
-    public interface IFilterDependency
+    /// <value>
+    /// An <see cref="long"/> with the current date and time as ticks.
+    /// </value>
+    long CurrentTicks
     {
-        /// <summary>
-        /// Gets the current date and time as ticks.
-        /// </summary>
-        /// <value>
-        /// An <see cref="long"/> with the current date and time as ticks.
-        /// </value>
-        long CurrentTicks
-        {
-            get;
-        }
+        get;
     }
 }

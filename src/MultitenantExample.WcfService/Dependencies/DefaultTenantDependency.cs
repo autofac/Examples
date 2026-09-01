@@ -1,9 +1,8 @@
-﻿namespace MultitenantExample.WcfService.Dependencies
+﻿namespace MultitenantExample.WcfService.Dependencies;
+
+/// <summary>
+/// Tenant-specific dependency for the default tenant.
+/// </summary>
+public class DefaultTenantDependency : BaseDependency
 {
-    /// <summary>
-    /// Tenant-specific dependency for the default tenant.
-    /// </summary>
-    public class DefaultTenantDependency : BaseDependency
-    {
-    }
 }

@@ -1,17 +1,16 @@
 ﻿using System.Web.Mvc;
 using MvcExample.Dependencies;
 
-namespace MvcExample
+namespace MvcExample;
+
+/// <summary>
+/// Custom view page base class to illustrate view injection.
+/// </summary>
+/// <seealso cref="System.Web.Mvc.WebViewPage" />
+public abstract class CustomViewPage<TModel> : WebViewPage<TModel>
 {
-    /// <summary>
-    /// Custom view page base class to illustrate view injection.
-    /// </summary>
-    /// <seealso cref="System.Web.Mvc.WebViewPage" />
-    public abstract class CustomViewPage<TModel> : WebViewPage<TModel>
+    public IViewDependency? Dependency
     {
-        public IViewDependency Dependency
-        {
-            get; set;
-        }
+        get; set;
     }
 }

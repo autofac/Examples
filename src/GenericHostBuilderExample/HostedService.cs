@@ -1,14 +1,11 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Hosting;
 
 namespace GenericHostBuilderExample;
 
-internal class HostedService : IHostedService
+internal sealed class HostedService : IHostedService
 {
     private readonly ILogger _logger;
 
-    // ReSharper disable once UnusedMember.Global
     public HostedService(ILogger logger)
     {
         _logger = logger;

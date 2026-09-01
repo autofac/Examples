@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MultitenantExample.ConsoleApplication;
+﻿namespace MultitenantExample.ConsoleApplication;
 
 /// <summary>
 /// Demonstration dependency interface that allows you to inspect the unique

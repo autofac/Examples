@@ -1,9 +1,8 @@
-﻿namespace MultitenantExample.MvcApplication.Dependencies
+﻿namespace MultitenantExample.MvcApplication.Dependencies;
+
+/// <summary>
+/// Tenant-specific dependency for Tenant 2.
+/// </summary>
+public class Tenant2Dependency : BaseDependency
 {
-    /// <summary>
-    /// Tenant-specific dependency for Tenant 2.
-    /// </summary>
-    public class Tenant2Dependency : BaseDependency
-    {
-    }
 }

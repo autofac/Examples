@@ -1,22 +1,21 @@
 ﻿using System;
 
-namespace MvcExample.Dependencies
+namespace MvcExample.Dependencies;
+
+/// <summary>
+/// Simple dependency to show injection into a Razor view.
+/// </summary>
+public interface IViewDependency
 {
     /// <summary>
-    /// Simple dependency to show injection into a Razor view.
+    /// Gets the unique instance ID for the dependency.
     /// </summary>
-    public interface IViewDependency
+    /// <value>
+    /// A <see cref="System.Guid"/> that indicates the unique ID for the
+    /// instance.
+    /// </value>
+    Guid InstanceId
     {
-        /// <summary>
-        /// Gets the unique instance ID for the dependency.
-        /// </summary>
-        /// <value>
-        /// A <see cref="System.Guid"/> that indicates the unique ID for the
-        /// instance.
-        /// </value>
-        Guid InstanceId
-        {
-            get;
-        }
+        get;
     }
 }

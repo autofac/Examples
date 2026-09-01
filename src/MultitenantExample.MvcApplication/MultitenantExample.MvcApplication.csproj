@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <CodeAnalysisRuleSet>../../build/AspNet.ruleset</CodeAnalysisRuleSet>
     <TargetFramework>net481</TargetFramework>
     <OutputType>Library</OutputType>
     <OutputPath>bin/</OutputPath>

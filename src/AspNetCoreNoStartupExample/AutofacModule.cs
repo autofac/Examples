@@ -1,6 +1,5 @@
 ﻿using AspNetCoreNoStartupExample.Services;
 using Autofac;
-using Microsoft.Extensions.Logging;
 
 namespace AspNetCoreNoStartupExample;
 

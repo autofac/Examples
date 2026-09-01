@@ -1,32 +1,31 @@
 ﻿using WcfExample.Dependencies;
 
-namespace WcfExample
+namespace WcfExample;
+
+/// <summary>
+/// REST-enabled version of the service. Call
+/// http://localhost:25665/WebHostFactoryService.svc/GetInfo
+/// to see this execute.
+/// </summary>
+/// <seealso cref="WcfExample.IService" />
+public class WebHostFactoryService : IService
 {
-    /// <summary>
-    /// REST-enabled version of the service. Call
-    /// http://localhost:25665/WebHostFactoryService.svc/GetInfo
-    /// to see this execute.
-    /// </summary>
-    /// <seealso cref="WcfExample.IService" />
-    public class WebHostFactoryService : IService
+    public WebHostFactoryService(IDependency dependency)
     {
-        public WebHostFactoryService(IDependency dependency)
-        {
-            Dependency = dependency;
-        }
+        Dependency = dependency;
+    }
 
-        public IDependency Dependency
-        {
-            get; private set;
-        }
+    public IDependency Dependency
+    {
+        get; private set;
+    }
 
-        public GetServiceInfoResponse GetServiceInfo()
+    public GetServiceInfoResponse GetServiceInfo()
+    {
+        return new GetServiceInfoResponse
         {
-            return new GetServiceInfoResponse
-            {
-                DependencyInstanceId = Dependency.InstanceId,
-                ServiceImplementationTypeName = GetType().FullName
-            };
-        }
+            DependencyInstanceId = Dependency.InstanceId,
+            ServiceImplementationTypeName = GetType().FullName
+        };
     }
 }

@@ -5,72 +5,73 @@ using MultitenantExample.MvcApplication.Models;
 using MultitenantExample.MvcApplication.WcfMetadataConsumer;
 using MultitenantExample.MvcApplication.WcfService;
 
-namespace MultitenantExample.MvcApplication.Controllers
+namespace MultitenantExample.MvcApplication.Controllers;
+
+[HandleError]
+public class HomeController : Controller
 {
-    [HandleError]
-    public class HomeController : Controller
+    public HomeController(IDependency dependency, ITenantIdentificationStrategy tenantIdStrategy, IMultitenantService standardService, IMetadataConsumer metadataService)
     {
-        public HomeController(IDependency dependency, ITenantIdentificationStrategy tenantIdStrategy, IMultitenantService standardService, IMetadataConsumer metadataService)
-        {
-            Dependency = dependency;
-            TenantIdentificationStrategy = tenantIdStrategy;
-            StandardServiceProxy = standardService;
-            MetadataServiceProxy = metadataService;
-        }
+        Dependency = dependency;
+        TenantIdentificationStrategy = tenantIdStrategy;
+        StandardServiceProxy = standardService;
+        MetadataServiceProxy = metadataService;
+    }
 
-        public IDependency Dependency
-        {
-            get; set;
-        }
+    public IDependency Dependency
+    {
+        get; set;
+    }
 
-        public IMetadataConsumer MetadataServiceProxy
-        {
-            get; set;
-        }
+    public IMetadataConsumer MetadataServiceProxy
+    {
+        get; set;
+    }
 
-        public IMultitenantService StandardServiceProxy
-        {
-            get; set;
-        }
+    public IMultitenantService StandardServiceProxy
+    {
+        get; set;
+    }
 
-        public ITenantIdentificationStrategy TenantIdentificationStrategy
-        {
-            get; set;
-        }
+    public ITenantIdentificationStrategy TenantIdentificationStrategy
+    {
+        get; set;
+    }
 
-        public ActionResult About()
-        {
-            return View();
-        }
+    [HttpGet]
+    public ActionResult About()
+    {
+        return View();
+    }
 
-        public virtual ActionResult Index()
-        {
-            var model = BuildIndexModel();
-            return View(model);
-        }
+    [HttpGet]
+    public virtual ActionResult Index()
+    {
+        var model = BuildIndexModel();
+        return View(model);
+    }
 
-        protected virtual IndexModel BuildIndexModel()
+    protected virtual IndexModel BuildIndexModel()
+    {
+        var model = new IndexModel()
         {
-            var model = new IndexModel()
-            {
-                ControllerTypeName = GetType().Name,
-                DependencyInstanceId = Dependency.InstanceId,
-                DependencyTypeName = Dependency.GetType().Name,
-                TenantId = GetTenantId(),
-                StandardServiceInfo = StandardServiceProxy.GetServiceInfo(new MultitenantExample.MvcApplication.WcfService.GetServiceInfoRequest()),
-                MetadataServiceInfo = MetadataServiceProxy.GetServiceInfo(new MultitenantExample.MvcApplication.WcfMetadataConsumer.GetServiceInfoRequest())
-            };
-            return model;
-        }
+            ControllerTypeName = GetType().Name,
+            DependencyInstanceId = Dependency.InstanceId,
+            DependencyTypeName = Dependency.GetType().Name,
+            TenantId = GetTenantId(),
+            StandardServiceInfo = StandardServiceProxy.GetServiceInfo(new MultitenantExample.MvcApplication.WcfService.GetServiceInfoRequest()),
+            MetadataServiceInfo = MetadataServiceProxy.GetServiceInfo(new MultitenantExample.MvcApplication.WcfMetadataConsumer.GetServiceInfoRequest())
+        };
+        return model;
+    }
 
-        private object GetTenantId()
+    private object GetTenantId()
+    {
+        var success = TenantIdentificationStrategy.TryIdentifyTenant(out var tenantId);
+        if (!success || tenantId == null)
         {
-            var success = TenantIdentificationStrategy.TryIdentifyTenant(out var tenantId);
-            if (!success || tenantId == null)
-            {
-                return "[Default Tenant]";
-            }
-            return tenantId;
+            return "[Default Tenant]";
         }
+        return tenantId;
     }
 }

@@ -1,7 +1,6 @@
-﻿namespace WebApiExample.OwinSelfHost
+﻿namespace WebApiExample.OwinSelfHost;
+
+public interface ILogger
 {
-    public interface ILogger
-    {
-        void Write(string message, params object[] args);
-    }
+    void Write(string message, params object[] args);
 }

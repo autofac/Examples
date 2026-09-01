@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AttributeMetadataExample;
+﻿namespace AttributeMetadataExample;
 
 public class TypedManualMetadataAppender : ILogAppender
 {

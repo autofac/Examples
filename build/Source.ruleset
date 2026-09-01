@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Autofac Examples Rules" Description="Analyzer rules for all example projects." ToolsVersion="16.0">
+  <!-- Rule severities come from AnalysisLevel in Directory.Build.props. This file
+       records deliberate deviations from that baseline, of which there are
+       currently none that apply to every project. Anything ASP.NET specific
+       belongs in AspNet.ruleset instead. -->
+</RuleSet>

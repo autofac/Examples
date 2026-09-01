@@ -1,13 +1,12 @@
 ﻿using System.ServiceModel;
 using Autofac.Multitenant.Wcf;
 
-namespace MultitenantExample.WcfService
+namespace MultitenantExample.WcfService;
+
+[ServiceContract]
+[ServiceMetadataType(typeof(MetadataConsumerBuddyClass))]
+public interface IMetadataConsumer
 {
-    [ServiceContract]
-    [ServiceMetadataType(typeof(MetadataConsumerBuddyClass))]
-    public interface IMetadataConsumer
-    {
-        [OperationContract]
-        GetServiceInfoResponse GetServiceInfo();
-    }
+    [OperationContract]
+    GetServiceInfoResponse GetServiceInfo();
 }

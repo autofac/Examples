@@ -2,7 +2,7 @@
 
 public class AppenderMetadata
 {
-    public string AppenderName
+    public string? AppenderName
     {
         get; set;
     }

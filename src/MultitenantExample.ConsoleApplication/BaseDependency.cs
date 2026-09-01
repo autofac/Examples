@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MultitenantExample.ConsoleApplication;
+﻿namespace MultitenantExample.ConsoleApplication;
 
 /// <summary>
 /// Base class for dependencies. Used simply to avoid redundant code; it's not

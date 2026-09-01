@@ -6,44 +6,43 @@ using Autofac.Integration.Web;
 using Microsoft.AspNet.FriendlyUrls;
 using WebFormsExample.Dependencies;
 
-namespace WebFormsExample
+namespace WebFormsExample;
+
+public class Global : HttpApplication, IContainerProviderAccessor
 {
-    public class Global : HttpApplication, IContainerProviderAccessor
+    // Provider that holds the application container.
+    private static IContainerProvider? _containerProvider;
+
+    // Instance property that will be used by Autofac HttpModules
+    // to resolve and inject dependencies.
+    public IContainerProvider ContainerProvider
     {
-        // Provider that holds the application container.
-        private static IContainerProvider _containerProvider;
-
-        // Instance property that will be used by Autofac HttpModules
-        // to resolve and inject dependencies.
-        public IContainerProvider ContainerProvider
+        get
         {
-            get
-            {
-                return _containerProvider;
-            }
+            return _containerProvider!;
         }
+    }
 
-        public static void RegisterRoutes(RouteCollection routes)
+    public static void RegisterRoutes(RouteCollection routes)
+    {
+        var settings = new FriendlyUrlSettings
         {
-            var settings = new FriendlyUrlSettings
-            {
-                AutoRedirectMode = RedirectMode.Permanent
-            };
-            routes.EnableFriendlyUrls(settings);
-        }
+            AutoRedirectMode = RedirectMode.Permanent
+        };
+        routes.EnableFriendlyUrls(settings);
+    }
 
-        private void Application_Start(object sender, EventArgs e)
-        {
-            // Build up your application container and register your dependencies.
-            var builder = new ContainerBuilder();
-            builder.RegisterType<Dependency>().As<IDependency>();
+    private void Application_Start(object sender, EventArgs e)
+    {
+        // Build up your application container and register your dependencies.
+        var builder = new ContainerBuilder();
+        builder.RegisterType<Dependency>().As<IDependency>();
 
-            // Once you're done registering things, set the container
-            // provider up with your registrations.
-            _containerProvider = new ContainerProvider(builder.Build());
+        // Once you're done registering things, set the container
+        // provider up with your registrations.
+        _containerProvider = new ContainerProvider(builder.Build());
 
-            // Standard web forms startup.
-            RegisterRoutes(RouteTable.Routes);
-        }
+        // Standard web forms startup.
+        RegisterRoutes(RouteTable.Routes);
     }
 }

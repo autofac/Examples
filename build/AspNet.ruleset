@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="Autofac Examples ASP.NET Rules" Description="Analyzer rules for example projects hosted in ASP.NET." ToolsVersion="16.0">
+  <Include Path="Source.ruleset" Action="Default" />
+  <Rules AnalyzerId="Microsoft.CodeAnalysis.Analyzers" RuleNamespace="Microsoft.CodeAnalysis.Analyzers">
+    <!-- Remove underscores from member name - Web Forms generates _Default for
+         Default.aspx, and AutoEventWireup requires the Page_Load name. -->
+    <Rule Id="CA1707" Action="None" />
+    <!-- Change names to avoid reserved word overlaps - Global.asax expects a type named Global. -->
+    <Rule Id="CA1716" Action="None" />
+    <!-- Use LoggerMessage delegates - the right call in production, and noise wrapped around a two-line sample. -->
+    <Rule Id="CA1848" Action="None" />
+    <!-- Argument evaluation may be unnecessary if logging is disabled - same tradeoff as CA1848. -->
+    <Rule Id="CA1873" Action="None" />
+    <!-- Set ViewStateUserKey - wants a per-user value to key on, and these samples have no user identity. -->
+    <Rule Id="CA5368" Action="None" />
+  </Rules>
+</RuleSet>
