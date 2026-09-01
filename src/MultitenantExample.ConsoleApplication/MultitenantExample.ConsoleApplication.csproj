@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="9.1.0" />
-    <PackageReference Include="Autofac.Multitenant" Version="8.1.0" />
+    <PackageReference Include="Autofac" Version="9.3.2" />
+    <PackageReference Include="Autofac.Multitenant" Version="9.0.1" />
   </ItemGroup>
 
 </Project>

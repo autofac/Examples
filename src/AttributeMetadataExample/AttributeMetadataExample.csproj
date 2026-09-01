@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="9.1.0" />
-    <PackageReference Include="Autofac.Extras.AttributeMetadata" Version="6.0.0" />
+    <PackageReference Include="Autofac" Version="9.3.2" />
+    <PackageReference Include="Autofac.Extras.AttributeMetadata" Version="7.0.0" />
   </ItemGroup>
 
 </Project>
