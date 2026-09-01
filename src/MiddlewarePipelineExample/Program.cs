@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using Autofac.Core;
-using Autofac.Core.Resolving.Pipeline;
 using MiddlewarePipelineExample.Middleware;
 using MiddlewarePipelineExample.Services;
 
@@ -8,6 +7,10 @@ namespace MiddlewarePipelineExample;
 
 internal static class Program
 {
+    /// <summary>
+    /// Runs each scenario in turn. They are independent, so they each build their
+    /// own container rather than sharing one.
+    /// </summary>
     public static void Main()
     {
         AuditEveryRegistration();
@@ -44,6 +47,10 @@ internal static class Program
         Console.WriteLine("  neither registration mentions the middleware.");
     }
 
+    /// <summary>
+    /// Service middleware wraps every resolve of a service, so it can measure what
+    /// activation actually costs without the service or its registration knowing.
+    /// </summary>
     private static void TimeAResolve()
     {
         Header("Timing a resolve");
@@ -57,6 +64,12 @@ internal static class Program
         scope.Resolve<ISlowService>();
     }
 
+    /// <summary>
+    /// Setting <c>Instance</c> and returning without calling <c>next</c> ends the
+    /// pipeline early, so activation never happens. That is what makes a middleware
+    /// cache cheaper than a registration which has to construct something before it
+    /// can decide the work was unnecessary.
+    /// </summary>
     private static void ShortCircuitWithACache()
     {
         Header("Short-circuiting the pipeline");
@@ -75,12 +88,18 @@ internal static class Program
         Console.WriteLine("  the second resolve never reached activation.");
     }
 
+    /// <summary>
+    /// Supplies a constructor argument no caller passes. Watch which pipeline this
+    /// one attaches to: parameter selection belongs to the registration pipeline, so
+    /// service middleware is rejected outright.
+    /// </summary>
     private static void InjectAmbientState()
     {
         Header("Injecting ambient state");
 
         var correlationId = "req-001";
         var builder = new ContainerBuilder();
+
         // Parameter selection is a registration pipeline phase, so this one goes
         // on the registration. Adding it as service middleware throws, because a
         // service pipeline has already finished by the time parameters matter.
@@ -104,6 +123,12 @@ internal static class Program
         Console.WriteLine("  no caller passed the correlation id.");
     }
 
+    /// <summary>
+    /// Turns a captured dependency into an immediate, readable failure. Resolving a
+    /// per-scope service straight from the root container would otherwise keep it
+    /// alive for the life of the application, and the symptom usually shows up a
+    /// long way from the cause.
+    /// </summary>
     private static void RejectRootScopeResolves()
     {
         Header("Failing fast on a root scope resolve");
@@ -129,6 +154,9 @@ internal static class Program
         }
     }
 
+    /// <summary>
+    /// Writes a section title so each scenario's output is easy to tell apart.
+    /// </summary>
     private static void Header(string title)
     {
         Console.WriteLine();
