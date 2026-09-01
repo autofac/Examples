@@ -1,21 +1,20 @@
 ﻿using System.Web.Http;
 
-namespace WebApiExample.OwinSelfHost
+namespace WebApiExample.OwinSelfHost;
+
+public class TestController : ApiController
 {
-    public class TestController : ApiController
+    private readonly ILogger _logger;
+
+    public TestController(ILogger logger)
     {
-        private readonly ILogger _logger;
+        _logger = logger;
+    }
 
-        public TestController(ILogger logger)
-        {
-            _logger = logger;
-        }
+    public string Get()
+    {
+        _logger.Write("Inside the 'Get' method of the '{0}' controller.", GetType().Name);
 
-        public string Get()
-        {
-            _logger.Write("Inside the 'Get' method of the '{0}' controller.", GetType().Name);
-
-            return "Hello, world!";
-        }
+        return "Hello, world!";
     }
 }

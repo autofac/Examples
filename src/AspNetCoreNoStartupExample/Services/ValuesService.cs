@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-
-namespace AspNetCoreNoStartupExample.Services;
+﻿namespace AspNetCoreNoStartupExample.Services;
 
 public class ValuesService : IValuesService
 {

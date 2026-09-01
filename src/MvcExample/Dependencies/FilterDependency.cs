@@ -1,25 +1,24 @@
 ﻿using System;
 
-namespace MvcExample.Dependencies
+namespace MvcExample.Dependencies;
+
+/// <summary>
+/// Implementation of a simple dependency to inject into a filter.
+/// </summary>
+/// <seealso cref="MvcExample.Dependencies.IFilterDependency" />
+public class FilterDependency : IFilterDependency
 {
     /// <summary>
-    /// Implementation of a simple dependency to inject into a filter.
+    /// Gets the current date and time as ticks.
     /// </summary>
-    /// <seealso cref="MvcExample.Dependencies.IFilterDependency" />
-    public class FilterDependency : IFilterDependency
+    /// <value>
+    /// An <see cref="long" /> with the current date and time as ticks.
+    /// </value>
+    public long CurrentTicks
     {
-        /// <summary>
-        /// Gets the current date and time as ticks.
-        /// </summary>
-        /// <value>
-        /// An <see cref="long" /> with the current date and time as ticks.
-        /// </value>
-        public long CurrentTicks
+        get
         {
-            get
-            {
-                return DateTime.UtcNow.Ticks;
-            }
+            return DateTime.UtcNow.Ticks;
         }
     }
 }

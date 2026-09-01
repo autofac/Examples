@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Autofac;
 using Autofac.Extras.AttributeMetadata;
 using Autofac.Features.AttributeFilters;

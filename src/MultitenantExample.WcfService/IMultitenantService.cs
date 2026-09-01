@@ -1,11 +1,10 @@
 ﻿using System.ServiceModel;
 
-namespace MultitenantExample.WcfService
+namespace MultitenantExample.WcfService;
+
+[ServiceContract]
+public interface IMultitenantService
 {
-    [ServiceContract]
-    public interface IMultitenantService
-    {
-        [OperationContract]
-        GetServiceInfoResponse GetServiceInfo();
-    }
+    [OperationContract]
+    GetServiceInfoResponse GetServiceInfo();
 }

@@ -25,7 +25,7 @@ public class ManualTenantIdentificationStrategy : ITenantIdentificationStrategy
     /// <see cref="MultitenantExample.ConsoleApplication.ManualTenantIdentificationStrategy.TryIdentifyTenant"/>
     /// when the current tenant ID is requested.
     /// </value>
-    public object CurrentTenantId
+    public object? CurrentTenantId
     {
         get; set;
     }
@@ -38,7 +38,7 @@ public class ManualTenantIdentificationStrategy : ITenantIdentificationStrategy
     /// <returns>
     /// This implementation always returns <see langword="true"/>.
     /// </returns>
-    public bool TryIdentifyTenant(out object tenantId)
+    public bool TryIdentifyTenant(out object? tenantId)
     {
         if (CurrentTenantId.ToString() == "0")
         {

@@ -1,5 +1,4 @@
-﻿using System;
-using Autofac;
+﻿using Autofac;
 using Autofac.Multitenant;
 
 namespace MultitenantExample.ConsoleApplication;
@@ -20,12 +19,12 @@ public class Program
     /// <summary>
     /// The container from which dependencies will be resolved.
     /// </summary>
-    private static IContainer _container;
+    private static IContainer? _container;
 
     /// <summary>
     /// Strategy used for identifying the current tenant with multitenant DI.
     /// </summary>
-    private static ManualTenantIdentificationStrategy _tenantIdentifier;
+    private static ManualTenantIdentificationStrategy? _tenantIdentifier;
 
     /// <summary>
     /// Demo program entry point.

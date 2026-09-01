@@ -1,26 +1,25 @@
 ﻿using WcfExample.Dependencies;
 
-namespace WcfExample
+namespace WcfExample;
+
+public class HostFactoryService : IService
 {
-    public class HostFactoryService : IService
+    public HostFactoryService(IDependency dependency)
     {
-        public HostFactoryService(IDependency dependency)
-        {
-            Dependency = dependency;
-        }
+        Dependency = dependency;
+    }
 
-        public IDependency Dependency
-        {
-            get; private set;
-        }
+    public IDependency Dependency
+    {
+        get; private set;
+    }
 
-        public GetServiceInfoResponse GetServiceInfo()
+    public GetServiceInfoResponse GetServiceInfo()
+    {
+        return new GetServiceInfoResponse
         {
-            return new GetServiceInfoResponse
-            {
-                DependencyInstanceId = Dependency.InstanceId,
-                ServiceImplementationTypeName = GetType().FullName
-            };
-        }
+            DependencyInstanceId = Dependency.InstanceId,
+            ServiceImplementationTypeName = GetType().FullName
+        };
     }
 }

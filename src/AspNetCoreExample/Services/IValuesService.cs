@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace AspNetCoreExample.Services;
+﻿namespace AspNetCoreExample.Services;
 
 public interface IValuesService
 {

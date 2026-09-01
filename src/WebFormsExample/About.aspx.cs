@@ -1,8 +1,7 @@
 ﻿using System.Web.UI;
 
-namespace WebFormsExample
+namespace WebFormsExample;
+
+public partial class About : Page
 {
-    public partial class About : Page
-    {
-    }
 }

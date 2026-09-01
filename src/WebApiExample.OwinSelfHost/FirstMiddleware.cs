@@ -1,22 +1,21 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.Owin;
 
-namespace WebApiExample.OwinSelfHost
+namespace WebApiExample.OwinSelfHost;
+
+public class FirstMiddleware : OwinMiddleware
 {
-    public class FirstMiddleware : OwinMiddleware
+    private readonly ILogger _logger;
+
+    public FirstMiddleware(OwinMiddleware next, ILogger logger) : base(next)
     {
-        private readonly ILogger _logger;
+        _logger = logger;
+    }
 
-        public FirstMiddleware(OwinMiddleware next, ILogger logger) : base(next)
-        {
-            _logger = logger;
-        }
+    public override async Task Invoke(IOwinContext context)
+    {
+        _logger.Write("Inside the 'Invoke' method of the '{0}' middleware.", GetType().Name);
 
-        public override async Task Invoke(IOwinContext context)
-        {
-            _logger.Write("Inside the 'Invoke' method of the '{0}' middleware.", GetType().Name);
-
-            await Next.Invoke(context);
-        }
+        await Next.Invoke(context);
     }
 }

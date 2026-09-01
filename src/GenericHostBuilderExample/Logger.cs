@@ -1,7 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-
-namespace GenericHostBuilderExample;
+﻿namespace GenericHostBuilderExample;
 
 internal class Logger : ILogger
 {
