@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- NU1900 is the audit feed being unreachable, not a problem with the code.
+         A build shouldn't break because nuget.org rate-limited us. -->
+    <WarningsNotAsErrors>NU1900</WarningsNotAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- CA1707/CA1716: ASP.NET dictates these names. Web Forms code-behind is
+         _Default for Default.aspx, its event handlers must be Page_Load for
+         AutoEventWireup, and Global.asax expects a type named Global.
+         CA1848/CA1873: LoggerMessage delegates and IsEnabled guards are the
+         right call in production and pure noise in a ten-line sample.
+         CA5368: ViewStateUserKey wants a per-user value to key on, and these
+         samples have no user identity to supply one. -->
+    <NoWarn>$(NoWarn);CA1707;CA1716;CA1848;CA1873;CA5368</NoWarn>
+  </PropertyGroup>
+</Project>
