@@ -96,6 +96,16 @@
       "type": "coreclr"
     },
     {
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}/src/MiddlewarePipelineExample",
+      "name": "MiddlewarePipelineExample",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/MiddlewarePipelineExample/bin/Debug/net10.0/MiddlewarePipelineExample.dll",
+      "request": "launch",
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
       "cwd": "${workspaceFolder}/src/MultitenantExample.AspNetCore",
       "launchSettingsProfile": "MultitenantExample.AspNetCore",
       "name": "MultitenantExample.AspNetCore",
