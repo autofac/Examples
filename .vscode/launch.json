@@ -31,21 +31,6 @@
       "type": "coreclr"
     },
     {
-      "cwd": "${workspaceFolder}/src/MultitenantExample.AspNetCore",
-      "launchSettingsProfile": "MultitenantExample.AspNetCore",
-      "name": "MultitenantExample.AspNetCore",
-      "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/MultitenantExample.AspNetCore/bin/Debug/net10.0/MultitenantExample.AspNetCore.dll",
-      "request": "launch",
-      "serverReadyAction": {
-        "action": "openExternally",
-        "pattern": "\\\\bNow listening on:\\\\s+(https?://\\\\S+)",
-        "uriFormat": "%s/api/tenant?tenant=alpha"
-      },
-      "stopAtEntry": false,
-      "type": "coreclr"
-    },
-    {
       "cwd": "${workspaceFolder}/src/AspNetCoreNoStartupExample",
       "launchSettingsProfile": "AspNetCoreNoStartupExample",
       "name": "AspNetCoreNoStartupExample",
@@ -107,6 +92,21 @@
       "preLaunchTask": "build",
       "program": "${workspaceFolder}/src/GenericHostBuilderExample/bin/Debug/net10.0/GenericHostBuilderExample.dll",
       "request": "launch",
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "cwd": "${workspaceFolder}/src/MultitenantExample.AspNetCore",
+      "launchSettingsProfile": "MultitenantExample.AspNetCore",
+      "name": "MultitenantExample.AspNetCore",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/MultitenantExample.AspNetCore/bin/Debug/net10.0/MultitenantExample.AspNetCore.dll",
+      "request": "launch",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\\\bNow listening on:\\\\s+(https?://\\\\S+)",
+        "uriFormat": "%s/api/tenant?tenant=alpha"
+      },
       "stopAtEntry": false,
       "type": "coreclr"
     },
