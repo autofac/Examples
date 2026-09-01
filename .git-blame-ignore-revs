@@ -12,3 +12,6 @@ ccd9b352d4066839cbe2dff010df6ab464ea871e
 
 # Normalize whitespace and JSON key order via pre-commit.
 39b63732ecc81559303a7f1ab9d1283c37b279c9
+
+# Apply dotnet format across the solution.
+2fea688003a3947a656d91e0532cd2dff2a737c6
