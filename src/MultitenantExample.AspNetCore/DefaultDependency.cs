@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreMultitenantExample;
+﻿namespace MultitenantExample.AspNetCore;
 
 /// <summary>
 /// What every tenant gets unless it registers an override.

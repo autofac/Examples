@@ -31,11 +31,11 @@
       "type": "coreclr"
     },
     {
-      "cwd": "${workspaceFolder}/src/AspNetCoreMultitenantExample",
-      "launchSettingsProfile": "AspNetCoreMultitenantExample",
-      "name": "AspNetCoreMultitenantExample",
+      "cwd": "${workspaceFolder}/src/MultitenantExample.AspNetCore",
+      "launchSettingsProfile": "MultitenantExample.AspNetCore",
+      "name": "MultitenantExample.AspNetCore",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/AspNetCoreMultitenantExample/bin/Debug/net10.0/AspNetCoreMultitenantExample.dll",
+      "program": "${workspaceFolder}/src/MultitenantExample.AspNetCore/bin/Debug/net10.0/MultitenantExample.AspNetCore.dll",
       "request": "launch",
       "serverReadyAction": {
         "action": "openExternally",

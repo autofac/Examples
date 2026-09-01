@@ -13,9 +13,9 @@ Each example has its own README with what it shows and how to run it.
 | Example | Demonstrates | Packages |
 | --- | --- | --- |
 | [AspNetCoreExample](src/AspNetCoreExample/README.md) | A `Startup` class whose `ConfigureContainer` takes a `ContainerBuilder` | [`Autofac.Extensions.DependencyInjection`](https://github.com/autofac/Autofac.Extensions.DependencyInjection) |
-| [AspNetCoreMultitenantExample](src/AspNetCoreMultitenantExample/README.md) | Per-tenant registration overrides, with the tenant read from the query string | [`Autofac.AspNetCore.Multitenant`](https://github.com/autofac/Autofac.AspNetCore.Multitenant) |
 | [AspNetCoreNoStartupExample](src/AspNetCoreNoStartupExample/README.md) | The same wiring in the minimal hosting model, with no `Startup` class | [`Autofac.Extensions.DependencyInjection`](https://github.com/autofac/Autofac.Extensions.DependencyInjection) |
 | [AspNetCoreChildLifetimeScope](src/AspNetCoreChildLifetimeScope/README.md) | Two hosts sharing one container, each rooted in its own child scope | [`Autofac.Extensions.DependencyInjection`](https://github.com/autofac/Autofac.Extensions.DependencyInjection) |
+| [MultitenantExample.AspNetCore](src/MultitenantExample.AspNetCore/README.md) | Per-tenant registration overrides, with the tenant read from the query string | [`Autofac.AspNetCore.Multitenant`](https://github.com/autofac/Autofac.AspNetCore.Multitenant) |
 
 ### Hosting and core features
 

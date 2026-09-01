@@ -1,6 +1,6 @@
 ﻿using Autofac.Multitenant;
 
-namespace AspNetCoreMultitenantExample;
+namespace MultitenantExample.AspNetCore;
 
 /// <summary>
 /// Identifies the tenant from a <c>?tenant=</c> query string value. A real

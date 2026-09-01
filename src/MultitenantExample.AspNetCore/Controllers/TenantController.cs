@@ -1,7 +1,7 @@
 ﻿using Autofac.Multitenant;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCoreMultitenantExample.Controllers;
+namespace MultitenantExample.AspNetCore.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]

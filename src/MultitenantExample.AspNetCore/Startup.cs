@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using Autofac.Multitenant;
 
-namespace AspNetCoreMultitenantExample;
+namespace MultitenantExample.AspNetCore;
 
 public sealed class Startup
 {

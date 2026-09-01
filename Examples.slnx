@@ -2,8 +2,8 @@
   <Folder Name="/ASP.NET Core/">
     <Project Path="src/AspNetCoreChildLifetimeScope/AspNetCoreChildLifetimeScope.csproj" />
     <Project Path="src/AspNetCoreExample/AspNetCoreExample.csproj" />
-    <Project Path="src/AspNetCoreMultitenantExample/AspNetCoreMultitenantExample.csproj" />
     <Project Path="src/AspNetCoreNoStartupExample/AspNetCoreNoStartupExample.csproj" />
+    <Project Path="src/MultitenantExample.AspNetCore/MultitenantExample.AspNetCore.csproj" />
   </Folder>
   <Folder Name="/Hosting and Core Features/">
     <Project Path="src/AttributeMetadataExample/AttributeMetadataExample.csproj" />

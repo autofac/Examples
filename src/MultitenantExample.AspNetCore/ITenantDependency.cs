@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreMultitenantExample;
+﻿namespace MultitenantExample.AspNetCore;
 
 public interface ITenantDependency
 {

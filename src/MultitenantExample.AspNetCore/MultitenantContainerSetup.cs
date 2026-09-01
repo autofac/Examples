@@ -1,7 +1,7 @@
 ﻿using Autofac;
 using Autofac.Multitenant;
 
-namespace AspNetCoreMultitenantExample;
+namespace MultitenantExample.AspNetCore;
 
 /// <summary>
 /// Tenant overrides are configured here rather than in <c>Startup</c>, because

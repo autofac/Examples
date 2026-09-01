@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "AspNetCoreMultitenantExample": {
+    "MultitenantExample.AspNetCore": {
       "commandName": "Project",
       "environmentVariables": {
         "DOTNET_ENVIRONMENT": "Development"

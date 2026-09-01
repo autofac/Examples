@@ -1,4 +1,4 @@
-﻿namespace AspNetCoreMultitenantExample;
+﻿namespace MultitenantExample.AspNetCore;
 
 /// <summary>
 /// Registered only for specific tenants, to show the override winning over the
