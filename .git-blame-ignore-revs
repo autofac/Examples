@@ -15,3 +15,6 @@ ccd9b352d4066839cbe2dff010df6ab464ea871e
 
 # Apply dotnet format across the solution.
 2fea688003a3947a656d91e0532cd2dff2a737c6
+
+# Convert to file-scoped namespaces and drop redundant usings.
+f089e7856c50b437f6583ba069a3ed553d1f7d61
