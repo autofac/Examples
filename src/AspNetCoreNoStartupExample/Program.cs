@@ -1,6 +1,6 @@
+﻿using AspNetCoreNoStartupExample;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
-using AspNetCoreNoStartupExample;
 
 // This example shows how to use Autofac with the minimal hosting model
 // (no Startup class). Everything is configured inline in Program.cs.

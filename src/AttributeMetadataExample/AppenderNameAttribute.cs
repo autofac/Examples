@@ -12,5 +12,8 @@ public class AppenderNameAttribute : Attribute
         AppenderName = appenderName;
     }
 
-    public string AppenderName { get; private set; }
+    public string AppenderName
+    {
+        get; private set;
+    }
 }

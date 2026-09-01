@@ -13,10 +13,13 @@ namespace WcfExample
         /// Gets or sets the service implementation type name.
         /// </summary>
         /// <value>
-        /// A <see cref="System.String"/> with the service implementation type name to display.
+        /// A <see cref="string"/> with the service implementation type name to display.
         /// </value>
         [MessageBodyMember]
-        public string ServiceImplementationTypeName { get; set; }
+        public string ServiceImplementationTypeName
+        {
+            get; set;
+        }
 
         /// <summary>
         /// Gets or sets the dependency instance ID.
@@ -25,6 +28,9 @@ namespace WcfExample
         /// A <see cref="System.Guid"/> that indicates the unique ID for the dependency instance.
         /// </value>
         [MessageBodyMember]
-        public Guid DependencyInstanceId { get; set; }
+        public Guid DependencyInstanceId
+        {
+            get; set;
+        }
     }
 }

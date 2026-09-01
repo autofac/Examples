@@ -1,4 +1,4 @@
-using AspNetCoreChildLifetimeScope.Services;
+﻿using AspNetCoreChildLifetimeScope.Services;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
 

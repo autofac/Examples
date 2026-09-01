@@ -1,4 +1,4 @@
-namespace AspNetCoreNoStartupExample.Services;
+﻿namespace AspNetCoreNoStartupExample.Services;
 
 public interface IValuesService
 {

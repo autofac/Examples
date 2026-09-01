@@ -9,6 +9,9 @@ namespace MvcExample
     /// <seealso cref="System.Web.Mvc.WebViewPage" />
     public abstract class CustomViewPage<TModel> : WebViewPage<TModel>
     {
-        public IViewDependency Dependency { get; set; }
+        public IViewDependency Dependency
+        {
+            get; set;
+        }
     }
 }

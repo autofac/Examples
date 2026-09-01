@@ -12,25 +12,34 @@ namespace MultitenantExample.MvcApplication.Models
         /// Gets or sets the tenant ID to display.
         /// </summary>
         /// <value>
-        /// A <see cref="System.Object"/> that represents the current tenant ID.
+        /// A <see cref="object"/> that represents the current tenant ID.
         /// </value>
-        public object TenantId { get; set; }
+        public object TenantId
+        {
+            get; set;
+        }
 
         /// <summary>
         /// Gets or sets the controller type name.
         /// </summary>
         /// <value>
-        /// A <see cref="System.String"/> with the controller type name to display.
+        /// A <see cref="string"/> with the controller type name to display.
         /// </value>
-        public string ControllerTypeName { get; set; }
+        public string ControllerTypeName
+        {
+            get; set;
+        }
 
         /// <summary>
         /// Gets or sets the dependency type name.
         /// </summary>
         /// <value>
-        /// A <see cref="System.String"/> with the dependency type name to display.
+        /// A <see cref="string"/> with the dependency type name to display.
         /// </value>
-        public string DependencyTypeName { get; set; }
+        public string DependencyTypeName
+        {
+            get; set;
+        }
 
         /// <summary>
         /// Gets or sets the dependency instance ID.
@@ -38,7 +47,10 @@ namespace MultitenantExample.MvcApplication.Models
         /// <value>
         /// A <see cref="System.Guid"/> that indicates the unique ID for the dependency instance.
         /// </value>
-        public Guid DependencyInstanceId { get; set; }
+        public Guid DependencyInstanceId
+        {
+            get; set;
+        }
 
         /// <summary>
         /// Gets or sets the WCF service information for the service that consumes
@@ -48,7 +60,10 @@ namespace MultitenantExample.MvcApplication.Models
         /// A <see cref="MultitenantExample.MvcApplication.WcfService.GetServiceInfoResponse"/>
         /// containing information retrieved from the multitenant WCF service.
         /// </value>
-        public WcfMetadataConsumer.GetServiceInfoResponse MetadataServiceInfo { get; set; }
+        public WcfMetadataConsumer.GetServiceInfoResponse MetadataServiceInfo
+        {
+            get; set;
+        }
 
         /// <summary>
         /// Gets or sets the WCF service information for the service that doesn't
@@ -58,6 +73,9 @@ namespace MultitenantExample.MvcApplication.Models
         /// A <see cref="MultitenantExample.MvcApplication.WcfService.GetServiceInfoResponse"/>
         /// containing information retrieved from the multitenant WCF service.
         /// </value>
-        public WcfService.GetServiceInfoResponse StandardServiceInfo { get; set; }
+        public WcfService.GetServiceInfoResponse StandardServiceInfo
+        {
+            get; set;
+        }
     }
 }

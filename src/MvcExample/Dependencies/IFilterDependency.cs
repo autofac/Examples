@@ -9,8 +9,11 @@
         /// Gets the current date and time as ticks.
         /// </summary>
         /// <value>
-        /// An <see cref="System.Int64"/> with the current date and time as ticks.
+        /// An <see cref="long"/> with the current date and time as ticks.
         /// </value>
-        long CurrentTicks { get; }
+        long CurrentTicks
+        {
+            get;
+        }
     }
 }

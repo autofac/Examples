@@ -18,13 +18,25 @@ namespace MultitenantExample.MvcApplication.Controllers
             MetadataServiceProxy = metadataService;
         }
 
-        public IDependency Dependency { get; set; }
+        public IDependency Dependency
+        {
+            get; set;
+        }
 
-        public IMetadataConsumer MetadataServiceProxy { get; set; }
+        public IMetadataConsumer MetadataServiceProxy
+        {
+            get; set;
+        }
 
-        public IMultitenantService StandardServiceProxy { get; set; }
+        public IMultitenantService StandardServiceProxy
+        {
+            get; set;
+        }
 
-        public ITenantIdentificationStrategy TenantIdentificationStrategy { get; set; }
+        public ITenantIdentificationStrategy TenantIdentificationStrategy
+        {
+            get; set;
+        }
 
         public ActionResult About()
         {
@@ -53,7 +65,7 @@ namespace MultitenantExample.MvcApplication.Controllers
 
         private object GetTenantId()
         {
-            var success = TenantIdentificationStrategy.TryIdentifyTenant(out object tenantId);
+            var success = TenantIdentificationStrategy.TryIdentifyTenant(out var tenantId);
             if (!success || tenantId == null)
             {
                 return "[Default Tenant]";

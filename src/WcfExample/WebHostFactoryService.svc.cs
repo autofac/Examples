@@ -15,7 +15,10 @@ namespace WcfExample
             Dependency = dependency;
         }
 
-        public IDependency Dependency { get; private set; }
+        public IDependency Dependency
+        {
+            get; private set;
+        }
 
         public GetServiceInfoResponse GetServiceInfo()
         {

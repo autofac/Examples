@@ -1,5 +1,5 @@
+﻿using AspNetCoreExample.Services;
 using Autofac;
-using AspNetCoreExample.Services;
 
 namespace AspNetCoreExample;
 

@@ -11,9 +11,12 @@ namespace MvcExample.Models
         /// Gets or sets the value retrieved from the action filter.
         /// </summary>
         /// <value>
-        /// An <see cref="System.Int64"/> with the current date and time as ticks.
+        /// An <see cref="long"/> with the current date and time as ticks.
         /// </value>
-        public long FilterValue { get; set; }
+        public long FilterValue
+        {
+            get; set;
+        }
 
         /// <summary>
         /// Gets or sets the ID of the WCF service dependency.
@@ -21,6 +24,9 @@ namespace MvcExample.Models
         /// <value>
         /// The <see cref="Guid"/> that identifies the dependency injected into the WCF service.
         /// </value>
-        public Guid WcfServiceDependencyId { get; set; }
+        public Guid WcfServiceDependencyId
+        {
+            get; set;
+        }
     }
 }

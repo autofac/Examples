@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace GenericHostBuilderExample
+namespace GenericHostBuilderExample;
+
+internal class Logger : ILogger
 {
-    internal class Logger : ILogger
+    public async Task Log(string value)
     {
-        public async Task Log(string value)
-        {
-            await Console.Out.WriteLineAsync($"Logger: {value}");
-        }
+        await Console.Out.WriteLineAsync($"Logger: {value}");
     }
 }

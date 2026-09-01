@@ -12,7 +12,10 @@ namespace MvcExample.Controllers
             ServiceClient = serviceClient;
         }
 
-        public IService ServiceClient { get; private set; }
+        public IService ServiceClient
+        {
+            get; private set;
+        }
 
         public ActionResult About()
         {
