@@ -1,61 +1,46 @@
 {
   "configurations": [
     {
-      "cwd": "${workspaceFolder}/src/AspNetCore3Example",
-      "env": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "name": "AspNetCore3Example",
+      "cwd": "${workspaceFolder}/src/AspNetCoreChildLifetimeScope",
+      "launchSettingsProfile": "AspNetCoreChildLifetimeScope",
+      "name": "AspNetCoreChildLifetimeScope",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/AspNetCore3Example/bin/Debug/netcoreapp3.1/AspNetCore3Example.dll",
-      "request": "launch",
-      "serverReadyAction": {
-        "action": "openExternally",
-        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
-        "uriFormat": "%s/api/Values"
-      },
-      "sourceFileMap": {
-        "/Views": "${workspaceFolder}/Views"
-      },
-      "stopAtEntry": false,
-      "type": "coreclr"
-    },
-    {
-      "cwd": "${workspaceFolder}/src/AspNetCore3ChildLifetimeScope",
-      "env": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "name": "AspNetCore3ChildLifetimeScope",
-      "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/AspNetCore3ChildLifetimeScope/bin/Debug/netcoreapp3.1/AspNetCore3ChildLifetimeScope.dll",
+      "program": "${workspaceFolder}/src/AspNetCoreChildLifetimeScope/bin/Debug/net10.0/AspNetCoreChildLifetimeScope.dll",
       "request": "launch",
       "serverReadyAction": {
         "action": "openExternally",
         "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
         "uriFormat": "%s/api/ApplicationA"
       },
-      "sourceFileMap": {
-        "/Views": "${workspaceFolder}/Views"
-      },
       "stopAtEntry": false,
       "type": "coreclr"
     },
     {
       "cwd": "${workspaceFolder}/src/AspNetCoreExample",
-      "env": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
+      "launchSettingsProfile": "AspNetCoreExample",
       "name": "AspNetCoreExample",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/AspNetCoreExample/bin/Debug/net6.0/AspNetCoreExample.dll",
+      "program": "${workspaceFolder}/src/AspNetCoreExample/bin/Debug/net10.0/AspNetCoreExample.dll",
       "request": "launch",
       "serverReadyAction": {
         "action": "openExternally",
         "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
         "uriFormat": "%s/api/Values"
       },
-      "sourceFileMap": {
-        "/Views": "${workspaceFolder}/Views"
+      "stopAtEntry": false,
+      "type": "coreclr"
+    },
+    {
+      "cwd": "${workspaceFolder}/src/AspNetCoreNoStartupExample",
+      "launchSettingsProfile": "AspNetCoreNoStartupExample",
+      "name": "AspNetCoreNoStartupExample",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/src/AspNetCoreNoStartupExample/bin/Debug/net10.0/AspNetCoreNoStartupExample.dll",
+      "request": "launch",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/api/Values"
       },
       "stopAtEntry": false,
       "type": "coreclr"
@@ -65,7 +50,7 @@
       "cwd": "${workspaceFolder}/src/AttributeMetadataExample",
       "name": "AttributeMetadataExample",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/AttributeMetadataExample/bin/Debug/net6.0/AttributeMetadataExample.dll",
+      "program": "${workspaceFolder}/src/AttributeMetadataExample/bin/Debug/net10.0/AttributeMetadataExample.dll",
       "request": "launch",
       "stopAtEntry": false,
       "type": "coreclr"
@@ -75,7 +60,7 @@
       "cwd": "${workspaceFolder}/src/ConfigurationExample",
       "name": "ConfigurationExample",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/ConfigurationExample/bin/Debug/net6.0/ConfigurationExample.dll",
+      "program": "${workspaceFolder}/src/ConfigurationExample/bin/Debug/net10.0/ConfigurationExample.dll",
       "request": "launch",
       "stopAtEntry": false,
       "type": "coreclr"
@@ -85,7 +70,7 @@
       "cwd": "${workspaceFolder}/src/GenericHostBuilderExample",
       "name": "GenericHostBuilderExample",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/GenericHostBuilderExample/bin/Debug/net6.0/GenericHostBuilderExample.dll",
+      "program": "${workspaceFolder}/src/GenericHostBuilderExample/bin/Debug/net10.0/GenericHostBuilderExample.dll",
       "request": "launch",
       "stopAtEntry": false,
       "type": "coreclr"
@@ -95,7 +80,7 @@
       "cwd": "${workspaceFolder}/src/MultitenantExample.ConsoleApplication",
       "name": "MultitenantExample.ConsoleApplication",
       "preLaunchTask": "build",
-      "program": "${workspaceFolder}/src/MultitenantExample.ConsoleApplication/bin/Debug/net6.0/MultitenantExample.ConsoleApplication.dll",
+      "program": "${workspaceFolder}/src/MultitenantExample.ConsoleApplication/bin/Debug/net10.0/MultitenantExample.ConsoleApplication.dll",
       "request": "launch",
       "stopAtEntry": false,
       "type": "coreclr"
