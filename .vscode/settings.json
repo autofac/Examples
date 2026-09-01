@@ -8,6 +8,5 @@
     "multitenant",
     "unconfigured"
   ],
-  "omnisharp.enableEditorConfigSupport": true,
-  "omnisharp.enableRoslynAnalyzers": true
+  "dotnet.defaultSolution": "Examples.slnx"
 }
