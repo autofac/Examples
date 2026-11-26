@@ -1,6 +1,6 @@
 name: examples
 version: 1.0.0
-description: AI agent instructions for Examples, generated from autofac/.github by tools/Update-AiInstruction.ps1 there.
+description: AI agent instructions for Examples.
 author: Autofac Project
 targets:
   - claude
